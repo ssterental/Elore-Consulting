@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eloré Consulting | SEO & AI-Optimized Websites for Local Businesses</title>
+    <meta name="description" content="Eloré Consulting builds SEO and Agentic AI-optimized websites for local businesses. Grow your business with cutting-edge web presence at an affordable price.">
+    <meta name="keywords" content="SEO websites, AI optimized websites, local business websites, agentic optimization, web design, affordable websites, small business SEO">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Eloré Consulting">
+    <meta name="theme-color" content="#1b2d4b">
+    <meta property="og:title" content="Eloré Consulting | SEO & AI-Optimized Websites for Local Businesses">
+    <meta property="og:description" content="We build SEO and Agentic AI-optimized websites that help local businesses grow and make more money.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Eloré Consulting",
+        "description": "SEO & Agentic AI-optimized websites for local businesses looking to grow their business and make more money.",
+        "url": "https://eloreconsulting.com",
+        "priceRange": "$$",
+        "knowsAbout": ["SEO", "Web Development", "AI Optimization", "Local Business Marketing", "Agentic AI"],
+        "serviceType": ["Web Design", "SEO Optimization", "AI-Powered Website Development"]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream: #faf5eb;
+            --cream-dark: #f0e8d8;
+            --navy: #1b2d4b;
+            --navy-light: #2a4066;
+            --navy-dark: #0f1c30;
+            --gold: #c49a3c;
+            --gold-light: #d4af5a;
+            --gold-dark: #a07a28;
+            --text-body: #3d4f5f;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Raleway', 'Segoe UI', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--navy);
+            background: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ── NAVIGATION ── */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.25rem 2rem;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        .nav.scrolled {
+            background: rgba(27, 45, 75, 0.97);
+            padding: 0.75rem 2rem;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .nav-logo-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .nav-logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cream);
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--cream);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.85;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover { opacity: 1; }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--navy-dark) !important;
+            padding: 0.6rem 1.5rem !important;
+            border-radius: 4px;
+            font-weight: 600 !important;
+            opacity: 1 !important;
+            transition: background 0.3s, transform 0.3s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-light) !important;
+            transform: translateY(-1px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--cream);
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: var(--navy-dark);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 40%, rgba(196, 154, 60, 0.12) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 50% at 20% 80%, rgba(42, 64, 102, 0.4) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 40% at 85% 20%, rgba(196, 154, 60, 0.08) 0%, transparent 50%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        /* Decorative wave element */
+        .hero-waves {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            overflow: hidden;
+        }
+
+        .hero-waves svg {
+            position: absolute;
+            bottom: -2px;
+            width: 100%;
+            height: 120px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero-logo {
+            width: 160px;
+            height: auto;
+            margin: 0 auto 2rem;
+            display: block;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            border: 1px solid rgba(196, 154, 60, 0.4);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            color: var(--cream);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: rgba(250, 245, 235, 0.7);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(196, 154, 60, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--cream);
+            border: 1px solid rgba(250, 245, 235, 0.3);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--cream);
+            background: rgba(250, 245, 235, 0.05);
+            transform: translateY(-2px);
+        }
+
+        /* ── STATS BAR ── */
+        .stats {
+            background: var(--navy);
+            padding: 3rem 2rem;
+        }
+
+        .stats-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 0.5rem;
+            position: relative;
+        }
+
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background: rgba(196, 154, 60, 0.25);
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(250, 245, 235, 0.5);
+            margin-top: 0.25rem;
+            font-weight: 500;
+        }
+
+        /* ── SECTIONS SHARED ── */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-heading {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .section-sub {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            max-width: 600px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* ── ABOUT / VALUE PROP ── */
+        .about {
+            background: var(--cream);
+            position: relative;
+        }
+
+        .about-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-visual-box {
+            width: 100%;
+            aspect-ratio: 1;
+            max-width: 420px;
+            background: var(--navy);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-visual-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 30% 70%, rgba(196, 154, 60, 0.15) 0%, transparent 60%),
+                radial-gradient(circle at 70% 30%, rgba(42, 64, 102, 0.5) 0%, transparent 50%);
+        }
+
+        .about-visual-box svg {
+            position: relative;
+            z-index: 1;
+            width: 55%;
+        }
+
+        .about-text .section-sub {
+            margin-bottom: 2rem;
+        }
+
+        .about-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .about-feature {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .about-feature-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(196, 154, 60, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-dark);
+            font-size: 1rem;
+        }
+
+        .about-feature-text h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.15rem;
+        }
+
+        .about-feature-text p {
+            font-size: 0.85rem;
+            color: var(--text-body);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* ── SERVICES ── */
+        .services {
+            background: var(--navy-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 80% 80%, rgba(196, 154, 60, 0.06) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 40% at 10% 20%, rgba(42, 64, 102, 0.3) 0%, transparent 60%);
+        }
+
+        .services-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .services .section-heading {
+            color: var(--cream);
+        }
+
+        .services .section-sub {
+            color: rgba(250, 245, 235, 0.6);
+            margin-bottom: 3.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: rgba(250, 245, 235, 0.04);
+            border: 1px solid rgba(250, 245, 235, 0.08);
+            border-radius: 10px;
+            padding: 2.5rem 2rem;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+            transform-origin: left;
+        }
+
+        .service-card:hover {
+            background: rgba(250, 245, 235, 0.07);
+            border-color: rgba(196, 154, 60, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: rgba(196, 154, 60, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: rgba(250, 245, 235, 0.55);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* ── PROCESS ── */
+        .process {
+            background: var(--cream);
+        }
+
+        .process-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .process .section-sub {
+            margin-bottom: 4rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 32px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), rgba(196, 154, 60, 0.15));
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--gold);
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 20px rgba(27, 45, 75, 0.2);
+        }
+
+        .process-step h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            font-size: 0.85rem;
+            color: var(--text-body);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* ── CTA ── */
+        .cta-section {
+            background: var(--navy);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 7rem 2rem;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 60% at 50% 50%, rgba(196, 154, 60, 0.1) 0%, transparent 70%);
+        }
+
+        .cta-inner {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .cta-section p {
+            font-size: 1.05rem;
+            color: rgba(250, 245, 235, 0.6);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .cta-section .btn-primary {
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* ── CONTACT FORM ── */
+        .contact-form {
+            max-width: 520px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(250, 245, 235, 0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: rgba(250, 245, 235, 0.06);
+            border: 1px solid rgba(250, 245, 235, 0.12);
+            border-radius: 6px;
+            color: var(--cream);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 300;
+            transition: border-color 0.3s, background 0.3s;
+            outline: none;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(250, 245, 235, 0.3);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--gold);
+            background: rgba(250, 245, 235, 0.09);
+        }
+
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23c49a3c' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--navy-dark);
+            color: var(--cream);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .form-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(250, 245, 235, 0.3);
+            margin-top: 1rem;
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        .form-success-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(196, 154, 60, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .form-success h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-success p {
+            font-size: 0.95rem;
+            color: rgba(250, 245, 235, 0.6);
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 640px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: var(--navy-dark);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(196, 154, 60, 0.1);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo svg {
+            width: 32px;
+        }
+
+        .footer-logo span {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--cream);
+            letter-spacing: 0.05em;
+        }
+
+        .footer-tagline {
+            font-size: 0.85rem;
+            color: rgba(250, 245, 235, 0.4);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .footer-copy {
+            font-size: 0.75rem;
+            color: rgba(250, 245, 235, 0.25);
+            letter-spacing: 0.05em;
+        }
+
+        /* ── ANIMATIONS ── */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+            .about-visual { order: -1; }
+            .about-visual-box { max-width: 300px; }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .process-steps { grid-template-columns: 1fr 1fr; gap: 3rem 2rem; }
+            .process-steps::before { display: none; }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+            .stat-item:nth-child(2)::after { display: none; }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(27, 45, 75, 0.98);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1.25rem;
+                backdrop-filter: blur(12px);
+            }
+            .nav-links.open { display: flex; }
+            .hamburger { display: flex; }
+            .services-grid { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: 1fr; gap: 2.5rem; }
+            .stats-inner { grid-template-columns: 1fr 1fr; }
+            .stat-item::after { display: none !important; }
+            section { padding: 4rem 1.25rem; }
+            .hero-logo { width: 120px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ── NAVIGATION ── -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <svg class="nav-logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="38" r="14" fill="#c49a3c"/>
+                    <rect x="47" y="10" width="6" height="20" rx="3" fill="#c49a3c" opacity="0.7"/>
+                    <rect x="35" y="14" width="5" height="16" rx="2.5" fill="#c49a3c" opacity="0.5"/>
+                    <rect x="60" y="14" width="5" height="16" rx="2.5" fill="#c49a3c" opacity="0.5"/>
+                    <rect x="25" y="20" width="4" height="10" rx="2" fill="#c49a3c" opacity="0.3"/>
+                    <rect x="71" y="20" width="4" height="10" rx="2" fill="#c49a3c" opacity="0.3"/>
+                    <path d="M15 58 Q32 50, 50 58 Q68 66, 85 58" stroke="#faf5eb" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                    <path d="M15 67 Q32 59, 50 67 Q68 75, 85 67" stroke="#faf5eb" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                    <path d="M15 76 Q32 68, 50 76 Q68 84, 85 76" stroke="#faf5eb" stroke-width="3" fill="none" stroke-linecap="round"/>
+                </svg>
+                <span class="nav-logo-text">Eloré</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="nav-cta">Get Started</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <!-- Inline SVG Logo -->
+            <svg class="hero-logo" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="72" r="28" fill="#c49a3c"/>
+                <rect x="94" y="18" width="12" height="40" rx="6" fill="#c49a3c" opacity="0.7"/>
+                <rect x="70" y="26" width="10" height="32" rx="5" fill="#c49a3c" opacity="0.5"/>
+                <rect x="120" y="26" width="10" height="32" rx="5" fill="#c49a3c" opacity="0.5"/>
+                <rect x="50" y="36" width="8" height="22" rx="4" fill="#c49a3c" opacity="0.35"/>
+                <rect x="142" y="36" width="8" height="22" rx="4" fill="#c49a3c" opacity="0.35"/>
+                <path d="M25 112 Q62 96, 100 112 Q138 128, 175 112" stroke="#1b2d4b" stroke-width="7" fill="none" stroke-linecap="round"/>
+                <path d="M25 130 Q62 114, 100 130 Q138 146, 175 130" stroke="#1b2d4b" stroke-width="7" fill="none" stroke-linecap="round"/>
+                <path d="M25 148 Q62 132, 100 148 Q138 164, 175 148" stroke="#1b2d4b" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <text x="100" y="200" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="48" font-weight="700" fill="#faf5eb" letter-spacing="4">ELORÉ</text>
+                <text x="100" y="228" text-anchor="middle" font-family="'Raleway', sans-serif" font-size="18" font-weight="400" fill="#faf5eb" letter-spacing="8" opacity="0.7">CONSULTING</text>
+            </svg>
+
+            <div class="hero-badge">SEO & AI-Powered Web Solutions</div>
+            <h1>Websites That Actually <em>Grow</em> Your Business</h1>
+            <p class="hero-sub">We build SEO and Agentic AI-optimized websites for local businesses looking to attract more customers, rank higher, and make more money — fast, quality results at a price that makes sense.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get Your Free Consultation</a>
+                <a href="#services" class="btn btn-secondary">See Our Services</a>
+            </div>
+        </div>
+        <div class="hero-waves">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C360,100 720,20 1440,60 L1440,120 L0,120 Z" fill="var(--navy)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ── STATS BAR ── -->
+    <div class="stats">
+        <div class="stats-inner">
+            <div class="stat-item fade-in">
+                <div class="stat-number">AI</div>
+                <div class="stat-label">Powered Optimization</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">SEO</div>
+                <div class="stat-label">Built-In From Day One</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">Fast</div>
+                <div class="stat-label">Delivery Turnaround</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">Local</div>
+                <div class="stat-label">Business Specialists</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── SERVICES ── -->
+    <section class="services" id="services">
+        <div class="services-inner">
+            <div class="section-label fade-in">What We Do</div>
+            <h2 class="section-heading fade-in">Built for Local Businesses <br>That Want to Win Online</h2>
+            <p class="section-sub fade-in">Every website we build is engineered to rank, convert, and scale — using the latest in AI and search optimization.</p>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    </div>
+                    <h3>SEO-Optimized Websites</h3>
+                    <p>Every page is built with Schema.org structured data, keyword-rich meta tags, and local search optimization so you rank where it matters — in your neighborhood.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Agentic AI Integration</h3>
+                    <p>We leverage cutting-edge AI agents to research your market, craft compelling copy, and build pages that speak directly to your ideal customers.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </div>
+                    <h3>Conversion-Focused Design</h3>
+                    <p>Beautiful, mobile-first landing pages designed to turn visitors into paying customers — with click-to-call, directions, and clear calls to action.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROCESS ── -->
+    <section class="process" id="process">
+        <div class="process-inner">
+            <div class="section-label fade-in">How It Works</div>
+            <h2 class="section-heading fade-in">From Zero to Live <br>in Days, Not Months</h2>
+            <p class="section-sub fade-in">We've streamlined the entire process using AI — so you get a professional web presence without the long timelines or agency price tags.</p>
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <h4>Discovery</h4>
+                    <p>Share your business details, Google Maps listing, or just your business name — we'll handle the research.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">2</div>
+                    <h4>AI Research</h4>
+                    <p>Our AI agents analyze your market, competitors, reviews, and local search landscape to craft the perfect strategy.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">3</div>
+                    <h4>Build & Optimize</h4>
+                    <p>We build a stunning, SEO-optimized landing page tailored to your business with Schema.org data baked in.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">4</div>
+                    <h4>Launch</h4>
+                    <p>Your site goes live — fast hosting, SSL secured, and ready to start bringing in new customers from day one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section class="about" id="about">
+        <div class="about-inner">
+            <div class="about-visual fade-in">
+                <div class="about-visual-box">
+                    <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="72" r="28" fill="#c49a3c"/>
+                        <rect x="94" y="18" width="12" height="40" rx="6" fill="#c49a3c" opacity="0.7"/>
+                        <rect x="70" y="26" width="10" height="32" rx="5" fill="#c49a3c" opacity="0.5"/>
+                        <rect x="120" y="26" width="10" height="32" rx="5" fill="#c49a3c" opacity="0.5"/>
+                        <rect x="50" y="36" width="8" height="22" rx="4" fill="#c49a3c" opacity="0.35"/>
+                        <rect x="142" y="36" width="8" height="22" rx="4" fill="#c49a3c" opacity="0.35"/>
+                        <path d="M25 112 Q62 96, 100 112 Q138 128, 175 112" stroke="#faf5eb" stroke-width="7" fill="none" stroke-linecap="round"/>
+                        <path d="M25 130 Q62 114, 100 130 Q138 146, 175 130" stroke="#faf5eb" stroke-width="7" fill="none" stroke-linecap="round"/>
+                        <path d="M25 148 Q62 132, 100 148 Q138 164, 175 148" stroke="#faf5eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+                        <text x="100" y="200" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="48" font-weight="700" fill="#faf5eb" letter-spacing="4">ELORÉ</text>
+                        <text x="100" y="228" text-anchor="middle" font-family="'Raleway', sans-serif" font-size="18" font-weight="400" fill="#faf5eb" letter-spacing="8" opacity="0.7">CONSULTING</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="about-text">
+                <div class="section-label fade-in">Why Eloré</div>
+                <h2 class="section-heading fade-in">The Future of Local Business Websites</h2>
+                <p class="section-sub fade-in">At Eloré Consulting, we believe every local business deserves a website that works as hard as they do. We combine the latest in AI and search optimization to deliver results that used to take weeks — in days.</p>
+                <div class="about-features fade-in">
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07a28" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="about-feature-text">
+                            <h4>AI-Powered Research & Copywriting</h4>
+                            <p>Our AI agents study your reviews, competitors, and market to craft messaging that resonates.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07a28" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="about-feature-text">
+                            <h4>Schema.org & Local SEO Built-In</h4>
+                            <p>Every site comes with structured data that helps Google understand and rank your business.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07a28" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="about-feature-text">
+                            <h4>Affordable, No Surprises</h4>
+                            <p>Quality results at a price that makes sense for small businesses — no hidden fees, no contracts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA / CONTACT FORM ── -->
+    <section class="cta-section" id="contact">
+        <div class="cta-inner fade-in">
+            <div class="section-label">Ready to Grow?</div>
+            <h2>Book Your Free Consultation</h2>
+            <p>Tell us about your business and we'll show you how an AI-optimized website can bring in more customers. No commitment, no pressure.</p>
+
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/ahassin9@gmail.com" method="POST">
+                <!-- FormSubmit config -->
+                <input type="hidden" name="_cc" value="salo.sterental@gmail.com">
+                <input type="hidden" name="_subject" value="New Consultation Request — Eloré Consulting">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_next" id="formNext">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="First Name" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="Last Name" placeholder="Smith" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="Email" placeholder="john@mybusiness.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="Phone" placeholder="(305) 555-1234">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="business">Business Name</label>
+                    <input type="text" id="business" name="Business Name" placeholder="Your business name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="businessType">Business Type</label>
+                    <select id="businessType" name="Business Type" required>
+                        <option value="" disabled selected>Select your industry</option>
+                        <option value="Restaurant / Cafe">Restaurant / Cafe</option>
+                        <option value="Salon / Barbershop">Salon / Barbershop</option>
+                        <option value="Auto Repair / Service">Auto Repair / Service</option>
+                        <option value="Medical / Dental">Medical / Dental</option>
+                        <option value="Legal Services">Legal Services</option>
+                        <option value="Fitness / Gym">Fitness / Gym</option>
+                        <option value="Retail / Shop">Retail / Shop</option>
+                        <option value="Home Services">Home Services</option>
+                        <option value="Professional Services">Professional Services</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell Us About Your Goals</label>
+                    <textarea id="message" name="Message" placeholder="What are you looking to achieve with a new website? Any specific needs or challenges?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit-btn" id="submitBtn">Send Consultation Request</button>
+                <p class="form-note">We typically respond within 24 hours.</p>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+                <div class="form-success-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3>We Got Your Message!</h3>
+                <p>Thanks for reaching out. We'll be in touch within 24 hours to discuss how we can help grow your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <svg width="32" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="25" r="12" fill="#c49a3c"/>
+                <rect x="47" y="5" width="6" height="15" rx="3" fill="#c49a3c" opacity="0.7"/>
+                <rect x="37" y="9" width="5" height="11" rx="2.5" fill="#c49a3c" opacity="0.5"/>
+                <rect x="58" y="9" width="5" height="11" rx="2.5" fill="#c49a3c" opacity="0.5"/>
+                <path d="M12 48 Q31 40, 50 48 Q69 56, 88 48" stroke="#faf5eb" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <path d="M12 57 Q31 49, 50 57 Q69 65, 88 57" stroke="#faf5eb" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <path d="M12 66 Q31 58, 50 66 Q69 74, 88 66" stroke="#faf5eb" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </svg>
+            <span>Eloré Consulting</span>
+        </div>
+        <p class="footer-tagline">SEO & AI-Optimized Websites for Local Businesses</p>
+        <p class="footer-copy">&copy; 2026 Eloré Consulting. All rights reserved.</p>
+    </footer>
+
+    <!-- ── JAVASCRIPT ── -->
+    <script>
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, i * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Navbar scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // Set the _next redirect to the current page with a success parameter
+        document.getElementById('formNext').value = window.location.href.split('?')[0] + '?submitted=true#contact';
+
+        // Check if returning from successful submission
+        if (window.location.search.includes('submitted=true')) {
+            contactForm.style.display = 'none';
+            formSuccess.classList.add('show');
+            // Clean up the URL
+            window.history.replaceState({}, '', window.location.pathname + '#contact');
+        }
+
+        contactForm.addEventListener('submit', function() {
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+        });
+    </script>
+</body>
+</html>
