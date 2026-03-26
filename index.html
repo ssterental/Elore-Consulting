@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eloré Consulting | SEO & AI-Optimized Websites for Local Businesses</title>
-    <meta name="description" content="Eloré Consulting builds SEO and Agentic AI-optimized websites for local businesses. Grow your business with cutting-edge web presence at an affordable price.">
-    <meta name="keywords" content="SEO websites, AI optimized websites, local business websites, agentic optimization, web design, affordable websites, small business SEO">
+    <title>Eloré Consulting | AI Strategy & Implementation for Businesses</title>
+    <meta name="description" content="Eloré Consulting helps businesses integrate AI into their workflows — from training and tool setup to fractional AI product management and custom AI development.">
+    <meta name="keywords" content="AI consulting, AI integration, workflow automation, fractional AI product manager, custom AI development, Claude, Lindy, AI for business">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Eloré Consulting">
     <meta name="theme-color" content="#1b2d4b">
-    <meta property="og:title" content="Eloré Consulting | SEO & AI-Optimized Websites for Local Businesses">
-    <meta property="og:description" content="We build SEO and Agentic AI-optimized websites that help local businesses grow and make more money.">
+    <meta property="og:title" content="Eloré Consulting | AI Strategy & Implementation for Businesses">
+    <meta property="og:description" content="We help businesses cut through the AI noise — from teaching the basics to building custom solutions.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <script type="application/ld+json">
@@ -18,11 +18,11 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "Eloré Consulting",
-        "description": "SEO & Agentic AI-optimized websites for local businesses looking to grow their business and make more money.",
+        "description": "AI strategy and implementation consulting — from workflow integration and training to fractional product management and custom AI development.",
         "url": "https://eloreconsulting.com",
         "priceRange": "$$",
-        "knowsAbout": ["SEO", "Web Development", "AI Optimization", "Local Business Marketing", "Agentic AI"],
-        "serviceType": ["Web Design", "SEO Optimization", "AI-Powered Website Development"]
+        "knowsAbout": ["Artificial Intelligence", "AI Integration", "Workflow Automation", "Product Management", "AI Development", "Claude", "Lindy"],
+        "serviceType": ["AI Consulting", "AI Training", "Fractional AI Product Management", "Custom AI Development"]
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -186,7 +186,6 @@
             pointer-events: none;
         }
 
-        /* Decorative wave element */
         .hero-waves {
             position: absolute;
             bottom: 0;
@@ -377,6 +376,283 @@
             font-weight: 300;
         }
 
+        /* ── SERVICES ── */
+        .services {
+            background: var(--navy-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 80% 80%, rgba(196, 154, 60, 0.06) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 40% at 10% 20%, rgba(42, 64, 102, 0.3) 0%, transparent 60%);
+        }
+
+        .services-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .services .section-heading {
+            color: var(--cream);
+        }
+
+        .services .section-sub {
+            color: rgba(250, 245, 235, 0.6);
+            margin-bottom: 3.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: rgba(250, 245, 235, 0.04);
+            border: 1px solid rgba(250, 245, 235, 0.08);
+            border-radius: 10px;
+            padding: 2.5rem 2rem;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+            transform-origin: left;
+        }
+
+        .service-card:hover {
+            background: rgba(250, 245, 235, 0.07);
+            border-color: rgba(196, 154, 60, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: rgba(196, 154, 60, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .service-tier {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: rgba(250, 245, 235, 0.55);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-top: 1.25rem;
+            padding: 0;
+        }
+
+        .service-list li {
+            font-size: 0.82rem;
+            color: rgba(250, 245, 235, 0.45);
+            padding: 0.4rem 0;
+            border-top: 1px solid rgba(250, 245, 235, 0.06);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 400;
+        }
+
+        .service-list li::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ── INDUSTRIES ── */
+        .industries {
+            background: var(--cream);
+        }
+
+        .industries-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .industries .section-sub {
+            margin-bottom: 3rem;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.25rem;
+        }
+
+        .industry-card {
+            background: var(--navy);
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .industry-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 100%, rgba(196, 154, 60, 0.08) 0%, transparent 70%);
+        }
+
+        .industry-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(27, 45, 75, 0.3);
+        }
+
+        .industry-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(196, 154, 60, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .industry-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 0.3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .industry-card p {
+            font-size: 0.75rem;
+            color: rgba(250, 245, 235, 0.4);
+            line-height: 1.5;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── PROCESS ── */
+        .process {
+            background: var(--cream);
+        }
+
+        .process-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .process .section-sub {
+            margin-bottom: 4rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 32px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), rgba(196, 154, 60, 0.15));
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--gold);
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 20px rgba(27, 45, 75, 0.2);
+        }
+
+        .process-step h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            font-size: 0.85rem;
+            color: var(--text-body);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
         /* ── ABOUT / VALUE PROP ── */
         .about {
             background: var(--cream);
@@ -467,173 +743,6 @@
             font-size: 0.85rem;
             color: var(--text-body);
             line-height: 1.6;
-            font-weight: 300;
-        }
-
-        /* ── SERVICES ── */
-        .services {
-            background: var(--navy-dark);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .services::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse 60% 50% at 80% 80%, rgba(196, 154, 60, 0.06) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 40% at 10% 20%, rgba(42, 64, 102, 0.3) 0%, transparent 60%);
-        }
-
-        .services-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .services .section-heading {
-            color: var(--cream);
-        }
-
-        .services .section-sub {
-            color: rgba(250, 245, 235, 0.6);
-            margin-bottom: 3.5rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        .service-card {
-            background: rgba(250, 245, 235, 0.04);
-            border: 1px solid rgba(250, 245, 235, 0.08);
-            border-radius: 10px;
-            padding: 2.5rem 2rem;
-            transition: all 0.4s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--gold), var(--gold-light));
-            transform: scaleX(0);
-            transition: transform 0.4s;
-            transform-origin: left;
-        }
-
-        .service-card:hover {
-            background: rgba(250, 245, 235, 0.07);
-            border-color: rgba(196, 154, 60, 0.2);
-            transform: translateY(-4px);
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 10px;
-            background: rgba(196, 154, 60, 0.12);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-
-        .service-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--cream);
-            margin-bottom: 0.75rem;
-        }
-
-        .service-card p {
-            font-size: 0.9rem;
-            color: rgba(250, 245, 235, 0.55);
-            line-height: 1.7;
-            font-weight: 300;
-        }
-
-        /* ── PROCESS ── */
-        .process {
-            background: var(--cream);
-        }
-
-        .process-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .process .section-sub {
-            margin-bottom: 4rem;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            position: relative;
-        }
-
-        .process-steps::before {
-            content: '';
-            position: absolute;
-            top: 32px;
-            left: 10%;
-            right: 10%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--gold), rgba(196, 154, 60, 0.15));
-        }
-
-        .process-step {
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background: var(--navy);
-            color: var(--gold);
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 4px 20px rgba(27, 45, 75, 0.2);
-        }
-
-        .process-step h4 {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 0.5rem;
-        }
-
-        .process-step p {
-            font-size: 0.85rem;
-            color: var(--text-body);
-            line-height: 1.7;
             font-weight: 300;
         }
 
@@ -870,6 +979,7 @@
             .process-steps::before { display: none; }
             .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
             .stat-item:nth-child(2)::after { display: none; }
+            .industries-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
         @media (max-width: 640px) {
@@ -893,6 +1003,7 @@
             .stat-item::after { display: none !important; }
             section { padding: 4rem 1.25rem; }
             .hero-logo { width: 120px; }
+            .industries-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
@@ -916,7 +1027,8 @@
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#process">Process</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#process">Approach</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact" class="nav-cta">Get Started</a></li>
             </ul>
@@ -929,7 +1041,6 @@
     <!-- ── HERO ── -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <!-- Inline SVG Logo -->
             <svg class="hero-logo" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="100" cy="72" r="28" fill="#c49a3c"/>
                 <rect x="94" y="18" width="12" height="40" rx="6" fill="#c49a3c" opacity="0.7"/>
@@ -944,12 +1055,12 @@
                 <text x="100" y="228" text-anchor="middle" font-family="'Raleway', sans-serif" font-size="18" font-weight="400" fill="#faf5eb" letter-spacing="8" opacity="0.7">CONSULTING</text>
             </svg>
 
-            <div class="hero-badge">SEO & AI-Powered Web Solutions</div>
-            <h1>Websites That Actually <em>Grow</em> Your Business</h1>
-            <p class="hero-sub">We build SEO and Agentic AI-optimized websites for local businesses looking to attract more customers, rank higher, and make more money — fast, quality results at a price that makes sense.</p>
+            <div class="hero-badge">AI Strategy & Implementation</div>
+            <h1>AI That Works for <em>Your</em> Business</h1>
+            <p class="hero-sub">We help companies cut through the noise and actually integrate AI into their workflows — from the first prompt to a fully custom solution.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get Your Free Consultation</a>
-                <a href="#services" class="btn btn-secondary">See Our Services</a>
+                <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+                <a href="#services" class="btn btn-secondary">Explore Our Services</a>
             </div>
         </div>
         <div class="hero-waves">
@@ -963,20 +1074,20 @@
     <div class="stats">
         <div class="stats-inner">
             <div class="stat-item fade-in">
-                <div class="stat-number">AI</div>
-                <div class="stat-label">Powered Optimization</div>
+                <div class="stat-number">Train</div>
+                <div class="stat-label">AI Basics & Workflows</div>
             </div>
             <div class="stat-item fade-in">
-                <div class="stat-number">SEO</div>
-                <div class="stat-label">Built-In From Day One</div>
+                <div class="stat-number">Embed</div>
+                <div class="stat-label">Fractional AI Leadership</div>
             </div>
             <div class="stat-item fade-in">
-                <div class="stat-number">Fast</div>
-                <div class="stat-label">Delivery Turnaround</div>
+                <div class="stat-number">Build</div>
+                <div class="stat-label">Custom AI Solutions</div>
             </div>
             <div class="stat-item fade-in">
-                <div class="stat-number">Local</div>
-                <div class="stat-label">Business Specialists</div>
+                <div class="stat-number">Scale</div>
+                <div class="stat-label">Across Your Organization</div>
             </div>
         </div>
     </div>
@@ -985,29 +1096,86 @@
     <section class="services" id="services">
         <div class="services-inner">
             <div class="section-label fade-in">What We Do</div>
-            <h2 class="section-heading fade-in">Built for Local Businesses <br>That Want to Win Online</h2>
-            <p class="section-sub fade-in">Every website we build is engineered to rank, convert, and scale — using the latest in AI and search optimization.</p>
+            <h2 class="section-heading fade-in">Three Ways to Work With Us,<br>Depending on Where You Are</h2>
+            <p class="section-sub fade-in">Whether you're just exploring what's possible or ready to build, we meet you where you are.</p>
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                     </div>
-                    <h3>SEO-Optimized Websites</h3>
-                    <p>Every page is built with Schema.org structured data, keyword-rich meta tags, and local search optimization so you rank where it matters — in your neighborhood.</p>
+                    <div class="service-tier">Tier 1 — Learn</div>
+                    <h3>AI Foundations & Workflow Integration</h3>
+                    <p>Get your team fluent in AI. We teach the fundamentals and help you integrate tools like Claude CoWork, Lindy, and others directly into your existing workflows.</p>
+                    <ul class="service-list">
+                        <li>Hands-on training for your team</li>
+                        <li>Workflow audits to find automation opportunities</li>
+                        <li>Tool selection & setup</li>
+                        <li>Quick wins that show ROI in weeks</li>
+                    </ul>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                     </div>
-                    <h3>Agentic AI Integration</h3>
-                    <p>We leverage cutting-edge AI agents to research your market, craft compelling copy, and build pages that speak directly to your ideal customers.</p>
+                    <div class="service-tier">Tier 2 — Embed</div>
+                    <h3>Fractional AI Product Manager</h3>
+                    <p>We embed with your team as a fractional PM to deeply understand your business, identify high-impact AI opportunities, and lead implementation.</p>
+                    <ul class="service-list">
+                        <li>Deep-dive into your operations & data</li>
+                        <li>AI opportunity mapping & roadmap</li>
+                        <li>Workflow automation & optimization</li>
+                        <li>Ongoing strategy & hands-on execution</li>
+                    </ul>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
                     </div>
-                    <h3>Conversion-Focused Design</h3>
-                    <p>Beautiful, mobile-first landing pages designed to turn visitors into paying customers — with click-to-call, directions, and clear calls to action.</p>
+                    <div class="service-tier">Tier 3 — Build</div>
+                    <h3>Custom AI Development</h3>
+                    <p>When off-the-shelf tools aren't enough, we bring in specialized AI developers to build exactly what your business needs — from custom models to full product builds.</p>
+                    <ul class="service-list">
+                        <li>Custom AI/ML solutions</li>
+                        <li>API integrations & data pipelines</li>
+                        <li>Proprietary tools & internal platforms</li>
+                        <li>End-to-end product development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── INDUSTRIES ── -->
+    <section class="industries" id="industries">
+        <div class="industries-inner">
+            <div class="section-label fade-in">Who We Work With</div>
+            <h2 class="section-heading fade-in">Focused Expertise Across<br>High-Impact Industries</h2>
+            <p class="section-sub fade-in">We've chosen these verticals because we know them — and because they have the most to gain from AI right now.</p>
+            <div class="industries-grid">
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">&#127916;</div>
+                    <h4>Entertainment & Content</h4>
+                    <p>Production, licensing, distribution, creator workflows</p>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">&#128226;</div>
+                    <h4>Marketing & Advertising</h4>
+                    <p>Campaign ops, creative workflows, analytics, media buying</p>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">&#128200;</div>
+                    <h4>Private Equity</h4>
+                    <p>Deal flow, portfolio ops, due diligence, reporting</p>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">&#127978;</div>
+                    <h4>Small & Medium Businesses</h4>
+                    <p>Operations, customer service, back-office automation</p>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">&#128230;</div>
+                    <h4>Product Businesses</h4>
+                    <p>Supply chain, inventory, e-commerce, product ops</p>
                 </div>
             </div>
         </div>
@@ -1016,29 +1184,24 @@
     <!-- ── PROCESS ── -->
     <section class="process" id="process">
         <div class="process-inner">
-            <div class="section-label fade-in">How It Works</div>
-            <h2 class="section-heading fade-in">From Zero to Live <br>in Days, Not Months</h2>
-            <p class="section-sub fade-in">We've streamlined the entire process using AI — so you get a professional web presence without the long timelines or agency price tags.</p>
+            <div class="section-label fade-in">Our Approach</div>
+            <h2 class="section-heading fade-in">No Fluff. No 80-Page Decks.<br>Just Results.</h2>
+            <p class="section-sub fade-in">We move fast and focus on impact. Here's the typical engagement arc.</p>
             <div class="process-steps">
                 <div class="process-step fade-in">
                     <div class="step-number">1</div>
-                    <h4>Discovery</h4>
-                    <p>Share your business details, Google Maps listing, or just your business name — we'll handle the research.</p>
+                    <h4>Discover</h4>
+                    <p>We learn your business, your pain points, and where AI can make a real difference — not a theoretical one. Usually a single working session.</p>
                 </div>
                 <div class="process-step fade-in">
                     <div class="step-number">2</div>
-                    <h4>AI Research</h4>
-                    <p>Our AI agents analyze your market, competitors, reviews, and local search landscape to craft the perfect strategy.</p>
+                    <h4>Implement</h4>
+                    <p>We start with the highest-impact, lowest-friction opportunity. You see results quickly, and we iterate from there. No 6-month timelines.</p>
                 </div>
                 <div class="process-step fade-in">
                     <div class="step-number">3</div>
-                    <h4>Build & Optimize</h4>
-                    <p>We build a stunning, SEO-optimized landing page tailored to your business with Schema.org data baked in.</p>
-                </div>
-                <div class="process-step fade-in">
-                    <div class="step-number">4</div>
-                    <h4>Launch</h4>
-                    <p>Your site goes live — fast hosting, SSL secured, and ready to start bringing in new customers from day one.</p>
+                    <h4>Scale</h4>
+                    <p>Once the first wins are in, we expand — deeper integrations, custom builds, team training. AI becomes part of how your company operates.</p>
                 </div>
             </div>
         </div>
@@ -1066,16 +1229,16 @@
             </div>
             <div class="about-text">
                 <div class="section-label fade-in">Why Eloré</div>
-                <h2 class="section-heading fade-in">The Future of Local Business Websites</h2>
-                <p class="section-sub fade-in">At Eloré Consulting, we believe every local business deserves a website that works as hard as they do. We combine the latest in AI and search optimization to deliver results that used to take weeks — in days.</p>
+                <h2 class="section-heading fade-in">Built by a Founder Who's Done It Before</h2>
+                <p class="section-sub fade-in">Eloré Consulting is led by Salo Sterental — former founder of SoStereo, where he built the entertainment industry's first music recommendation AI for sync licensing and grew the company to seven figures. Now he helps businesses across industries harness the same kind of transformative AI thinking.</p>
                 <div class="about-features fade-in">
                     <div class="about-feature">
                         <div class="about-feature-icon">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07a28" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
                         </div>
                         <div class="about-feature-text">
-                            <h4>AI-Powered Research & Copywriting</h4>
-                            <p>Our AI agents study your reviews, competitors, and market to craft messaging that resonates.</p>
+                            <h4>Operator, Not Just Advisor</h4>
+                            <p>We don't just recommend — we roll up our sleeves and implement alongside your team.</p>
                         </div>
                     </div>
                     <div class="about-feature">
@@ -1083,8 +1246,8 @@
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07a28" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
                         </div>
                         <div class="about-feature-text">
-                            <h4>Schema.org & Local SEO Built-In</h4>
-                            <p>Every site comes with structured data that helps Google understand and rank your business.</p>
+                            <h4>Tools That Actually Work</h4>
+                            <p>We work with proven platforms like Claude CoWork, Lindy, and custom solutions — not vaporware.</p>
                         </div>
                     </div>
                     <div class="about-feature">
@@ -1092,8 +1255,8 @@
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07a28" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
                         </div>
                         <div class="about-feature-text">
-                            <h4>Affordable, No Surprises</h4>
-                            <p>Quality results at a price that makes sense for small businesses — no hidden fees, no contracts.</p>
+                            <h4>Results in Weeks, Not Quarters</h4>
+                            <p>We focus on high-impact, quick-win opportunities first — then scale from a foundation of proven ROI.</p>
                         </div>
                     </div>
                 </div>
@@ -1104,14 +1267,13 @@
     <!-- ── CTA / CONTACT FORM ── -->
     <section class="cta-section" id="contact">
         <div class="cta-inner fade-in">
-            <div class="section-label">Ready to Grow?</div>
-            <h2>Book Your Free Consultation</h2>
-            <p>Tell us about your business and we'll show you how an AI-optimized website can bring in more customers. No commitment, no pressure.</p>
+            <div class="section-label">Let's Talk</div>
+            <h2>Ready to See What AI Can Actually Do for Your Business?</h2>
+            <p>We'll start with a conversation — no pitch, no pressure. Just an honest look at where AI fits in your world.</p>
 
-            <form class="contact-form" id="contactForm" action="https://formsubmit.co/ahassin9@gmail.com" method="POST">
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/salo.sterental@gmail.com" method="POST">
                 <!-- FormSubmit config -->
-                <input type="hidden" name="_cc" value="salo.sterental@gmail.com">
-                <input type="hidden" name="_subject" value="New Consultation Request — Eloré Consulting">
+                <input type="hidden" name="_subject" value="New AI Consulting Inquiry — Eloré Consulting">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
                 <input type="text" name="_honey" style="display:none">
@@ -1131,7 +1293,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="Email" placeholder="john@mybusiness.com" required>
+                        <input type="email" id="email" name="Email" placeholder="john@company.com" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
@@ -1140,33 +1302,40 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="business">Business Name</label>
-                    <input type="text" id="business" name="Business Name" placeholder="Your business name" required>
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="Company Name" placeholder="Your company name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="businessType">Business Type</label>
-                    <select id="businessType" name="Business Type" required>
+                    <label for="industry">Industry</label>
+                    <select id="industry" name="Industry" required>
                         <option value="" disabled selected>Select your industry</option>
-                        <option value="Restaurant / Cafe">Restaurant / Cafe</option>
-                        <option value="Salon / Barbershop">Salon / Barbershop</option>
-                        <option value="Auto Repair / Service">Auto Repair / Service</option>
-                        <option value="Medical / Dental">Medical / Dental</option>
-                        <option value="Legal Services">Legal Services</option>
-                        <option value="Fitness / Gym">Fitness / Gym</option>
-                        <option value="Retail / Shop">Retail / Shop</option>
-                        <option value="Home Services">Home Services</option>
-                        <option value="Professional Services">Professional Services</option>
+                        <option value="Entertainment & Content">Entertainment & Content</option>
+                        <option value="Marketing & Advertising">Marketing & Advertising</option>
+                        <option value="Private Equity">Private Equity</option>
+                        <option value="Small / Medium Business">Small / Medium Business</option>
+                        <option value="Product Business">Product Business</option>
                         <option value="Other">Other</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Tell Us About Your Goals</label>
-                    <textarea id="message" name="Message" placeholder="What are you looking to achieve with a new website? Any specific needs or challenges?"></textarea>
+                    <label for="interest">What Are You Most Interested In?</label>
+                    <select id="interest" name="Service Interest" required>
+                        <option value="" disabled selected>Select a service tier</option>
+                        <option value="AI Training & Workflow Integration">AI Training & Workflow Integration</option>
+                        <option value="Fractional AI Product Manager">Fractional AI Product Manager</option>
+                        <option value="Custom AI Development">Custom AI Development</option>
+                        <option value="Not Sure Yet">Not sure yet — let's talk</option>
+                    </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary form-submit-btn" id="submitBtn">Send Consultation Request</button>
+                <div class="form-group">
+                    <label for="message">Tell Us About Your Goals</label>
+                    <textarea id="message" name="Message" placeholder="What challenges are you looking to solve with AI? Any specific workflows, tools, or outcomes in mind?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit-btn" id="submitBtn">Send Inquiry</button>
                 <p class="form-note">We typically respond within 24 hours.</p>
             </form>
 
@@ -1175,7 +1344,7 @@
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
                 <h3>We Got Your Message!</h3>
-                <p>Thanks for reaching out. We'll be in touch within 24 hours to discuss how we can help grow your business.</p>
+                <p>Thanks for reaching out. We'll be in touch within 24 hours to discuss how AI can work for your business.</p>
             </div>
         </div>
     </section>
@@ -1194,7 +1363,7 @@
             </svg>
             <span>Eloré Consulting</span>
         </div>
-        <p class="footer-tagline">SEO & AI-Optimized Websites for Local Businesses</p>
+        <p class="footer-tagline">AI Strategy & Implementation for Businesses</p>
         <p class="footer-copy">&copy; 2026 Eloré Consulting. All rights reserved.</p>
     </footer>
 
@@ -1250,14 +1419,11 @@
         const formSuccess = document.getElementById('formSuccess');
         const submitBtn = document.getElementById('submitBtn');
 
-        // Set the _next redirect to the current page with a success parameter
         document.getElementById('formNext').value = window.location.href.split('?')[0] + '?submitted=true#contact';
 
-        // Check if returning from successful submission
         if (window.location.search.includes('submitted=true')) {
             contactForm.style.display = 'none';
             formSuccess.classList.add('show');
-            // Clean up the URL
             window.history.replaceState({}, '', window.location.pathname + '#contact');
         }
 
