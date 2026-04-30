@@ -95,14 +95,6 @@
             object-fit: contain;
         }
 
-        .nav-logo-text {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--cream);
-            letter-spacing: 0.05em;
-        }
-
         .nav-links {
             display: flex;
             align-items: center;
@@ -936,24 +928,14 @@
 
         .footer-logo {
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 0.75rem;
             margin-bottom: 1.5rem;
         }
 
         .footer-logo img {
-            width: 32px;
-            height: 32px;
+            width: 140px;
+            height: auto;
             object-fit: contain;
-        }
-
-        .footer-logo span {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--cream);
-            letter-spacing: 0.05em;
         }
 
         .footer-tagline {
@@ -1023,9 +1005,8 @@
     <!-- ── NAVIGATION ── -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#" class="nav-logo">
-                <img class="nav-logo-icon" src="images/elore-icon.png" alt="">
-                <span class="nav-logo-text">Eloré</span>
+            <a href="#" class="nav-logo" aria-label="Eloré Consulting — Home">
+                <img class="nav-logo-icon" src="images/elore-icon.png" alt="Eloré Consulting">
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#services">Services</a></li>
@@ -1331,8 +1312,7 @@
     <!-- ── FOOTER ── -->
     <footer class="footer">
         <div class="footer-logo">
-            <img src="images/elore-icon.png" alt="">
-            <span>Eloré Consulting</span>
+            <img src="images/elore-logo.png" alt="Eloré Consulting">
         </div>
         <p class="footer-tagline">AI Strategy & Implementation for Businesses</p>
         <p class="footer-copy">&copy; 2026 Eloré Consulting. All rights reserved.</p>
