@@ -8,9 +8,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 
-const title = 'Eloré Consulting | AI Consultant for Business — Strategy & Implementation';
+const title = 'Eloré Consulting — AI Consultant for Business, Miami';
 const description =
-  'Eloré Consulting helps businesses put AI to work — team training, fractional AI product management, and custom AI development. We implement alongside you, results in weeks. Miami, FL.';
+  'Eloré Consulting — an AI consultant for Miami businesses. AI training, fractional AI product management, and custom development, built alongside your team.';
 
 // ── FAQ: decision questions + persona-outcome questions (AEO/GEO targets) ──
 const faqs = [
@@ -83,6 +83,7 @@ const jsonLd = [
       'CRM Automation', 'AI for Small Business', 'Claude', 'Google Workspace AI',
     ],
     serviceType: ['AI Consulting', 'AI Training', 'Fractional AI Product Management', 'Custom AI Development'],
+    sameAs: ['https://www.linkedin.com/in/salosterental'],
     founder: { '@id': 'https://eloreconsulting.com/#salo' },
   },
   {
@@ -95,6 +96,7 @@ const jsonLd = [
       'Founder of Eloré Consulting and former founder of SoStereo, where he built the entertainment industry\'s first music-recommendation AI for sync licensing. Berklee-trained engineer and AI product builder.',
     worksFor: { '@id': 'https://eloreconsulting.com/#org' },
     knowsAbout: ['Artificial Intelligence', 'AI Product Management', 'AI Implementation', 'Automation'],
+    sameAs: ['https://www.linkedin.com/in/salosterental'],
   },
   {
     '@context': 'https://schema.org',
@@ -109,18 +111,26 @@ const jsonLd = [
 <Base title={title} description={description} jsonLd={jsonLd}>
   <!-- ── HERO ── -->
   <section class="hero" id="hero">
-    <div class="hero-content">
-      <img class="hero-logo" src="/images/elore-logo.png" alt="Eloré Consulting" width="160" />
-      <div class="hero-badge">AI Strategy &amp; Implementation</div>
-      <h1>AI That Works for <em>Your</em> Business</h1>
-      <p class="hero-sub">Most companies aren't behind on AI — they're behind on questions. Eloré is the AI consultant that cuts through the noise and puts AI to work where it actually moves the needle: smarter workflows, real automation, and custom builds — from your first prompt to a shipped solution.</p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary">Start a Conversation</a>
-        <a href="#services" class="btn btn-secondary">Explore Our Services</a>
+    <div class="hero-aurora"></div>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="hero-kicker"><span class="dot"></span>AI Strategy &amp; Implementation · Miami</span>
+        <h1>The AI consultant that makes AI actually work for <span class="grad-text">your</span> business</h1>
+        <p class="hero-sub">Most companies aren't behind on AI — they're behind on questions. We cut through the noise and put AI to work where it moves the needle: smarter workflows, real automation, and custom builds — shipped alongside your team, from the first prompt to production.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Start a conversation <span class="arrow">→</span></a>
+          <a href="#services" class="hero-link">See how we work</a>
+        </div>
+        <div class="hero-stack">
+          <span class="stack-label">// we build with</span>
+          <span class="tag">Claude</span>
+          <span class="tag">Lindy</span>
+          <span class="tag">RAG</span>
+          <span class="tag">NetSuite</span>
+          <span class="tag">Google Workspace</span>
+          <span class="tag">CRM / Apollo</span>
+        </div>
       </div>
-    </div>
-    <div class="hero-waves">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C360,100 720,20 1440,60 L1440,120 L0,120 Z" fill="var(--navy)"></path></svg>
     </div>
   </section>
 
@@ -196,32 +206,32 @@ const jsonLd = [
       <p class="section-sub fade-in">A few real, simple ways small and mid-size businesses are already putting AI to work — most with a human approving before anything sends, posts, or pays. Consider these a starting point, not the whole map.</p>
       <div class="usecases-grid">
         <div class="usecase fade-in">
-          <div class="usecase-icon">🎯</div>
+          <div class="usecase-index">01</div>
           <h3>Sales Lead Gen &amp; Follow-Up</h3>
           <p>AI researches each lead, drafts outreach in your voice from your CRM, and chases the follow-ups that usually slip — turning response time from hours into seconds.</p>
         </div>
         <div class="usecase fade-in">
-          <div class="usecase-icon">🔍</div>
+          <div class="usecase-index">02</div>
           <h3>Marketing &amp; SEO Content</h3>
           <p>Turn one idea into a week of content, repurpose it across channels, and draft copy built to rank in Google and AI search — so a lean team markets like a much bigger one.</p>
         </div>
         <div class="usecase fade-in">
-          <div class="usecase-icon">✉️</div>
+          <div class="usecase-index">03</div>
           <h3>Email &amp; Inbox Triage</h3>
           <p>AI summarizes long threads, surfaces what actually needs a decision, and drafts replies in your tone. You skim and send instead of digging.</p>
         </div>
         <div class="usecase fade-in">
-          <div class="usecase-icon">⚙️</div>
+          <div class="usecase-index">04</div>
           <h3>Operations &amp; Back Office</h3>
           <p>Automate the repetitive clicking — invoicing, reconciliation, onboarding, and the weekly report someone rebuilds by hand every Monday.</p>
         </div>
         <div class="usecase fade-in">
-          <div class="usecase-icon">🔌</div>
+          <div class="usecase-index">05</div>
           <h3>ERP &amp; Tool Integration</h3>
           <p>Connect AI to NetSuite, your CRM, or Google Workspace so your data becomes a conversation. It drafts and proposes; you approve before anything changes.</p>
         </div>
         <div class="usecase fade-in">
-          <div class="usecase-icon">📦</div>
+          <div class="usecase-index">06</div>
           <h3>Inventory &amp; Demand Forecasting</h3>
           <p>Predict stockouts before they happen, flag slow-movers, and draft reorder recommendations from your real sales data — reviewed and approved by your team.</p>
         </div>
@@ -240,11 +250,11 @@ const jsonLd = [
       <h2 class="section-heading fade-in">Focused Expertise Across<br />High-Impact Industries</h2>
       <p class="section-sub fade-in">We've chosen these verticals because we know them — and because they have the most to gain from AI right now.</p>
       <div class="industries-grid">
-        <div class="industry-card fade-in"><div class="industry-icon">🎬</div><h3>Entertainment &amp; Content</h3><p>Production, licensing, distribution, creator workflows</p></div>
-        <div class="industry-card fade-in"><div class="industry-icon">📣</div><h3>Marketing &amp; Advertising</h3><p>Campaign ops, creative workflows, analytics, media buying</p></div>
-        <div class="industry-card fade-in"><div class="industry-icon">📈</div><h3>Private Equity</h3><p>Deal flow, portfolio ops, due diligence, reporting</p></div>
-        <div class="industry-card fade-in"><div class="industry-icon">🏢</div><h3>Small &amp; Medium Businesses</h3><p>Operations, customer service, back-office automation</p></div>
-        <div class="industry-card fade-in"><div class="industry-icon">📦</div><h3>Product Businesses</h3><p>Supply chain, inventory, e-commerce, product ops</p></div>
+        <div class="industry-card fade-in"><div class="industry-index">01</div><h3>Entertainment &amp; Content</h3><p>Production, licensing, distribution, creator workflows</p></div>
+        <div class="industry-card fade-in"><div class="industry-index">02</div><h3>Marketing &amp; Advertising</h3><p>Campaign ops, creative workflows, analytics, media buying</p></div>
+        <div class="industry-card fade-in"><div class="industry-index">03</div><h3>Private Equity</h3><p>Deal flow, portfolio ops, due diligence, reporting</p></div>
+        <div class="industry-card fade-in"><div class="industry-index">04</div><h3>Small &amp; Medium Businesses</h3><p>Operations, customer service, back-office automation</p></div>
+        <div class="industry-card fade-in"><div class="industry-index">05</div><h3>Product Businesses</h3><p>Supply chain, inventory, e-commerce, product ops</p></div>
       </div>
     </div>
   </section>
@@ -256,9 +266,9 @@ const jsonLd = [
       <h2 class="section-heading fade-in">No Fluff. No 80-Page Decks.<br />Just Results.</h2>
       <p class="section-sub fade-in">We move fast and focus on impact. Here's the typical engagement arc.</p>
       <div class="process-steps">
-        <div class="process-step fade-in"><div class="step-number">1</div><h3>Discover</h3><p>We learn your business, your pain points, and where AI makes a real difference — not a theoretical one. Usually a single working session.</p></div>
-        <div class="process-step fade-in"><div class="step-number">2</div><h3>Implement</h3><p>We start with the highest-impact, lowest-friction opportunity. You see results quickly, and we iterate from there. No six-month timelines.</p></div>
-        <div class="process-step fade-in"><div class="step-number">3</div><h3>Scale</h3><p>Once the first wins are in, we expand — deeper integrations, custom builds, team training. AI becomes part of how your company operates.</p></div>
+        <div class="process-step fade-in"><div class="step-number">01 — Discover</div><h3>Discover</h3><p>We learn your business, your pain points, and where AI makes a real difference — not a theoretical one. Usually a single working session.</p></div>
+        <div class="process-step fade-in"><div class="step-number">02 — Implement</div><h3>Implement</h3><p>We start with the highest-impact, lowest-friction opportunity. You see results quickly, and we iterate from there. No six-month timelines.</p></div>
+        <div class="process-step fade-in"><div class="step-number">03 — Scale</div><h3>Scale</h3><p>Once the first wins are in, we expand — deeper integrations, custom builds, team training. AI becomes part of how your company operates.</p></div>
       </div>
     </div>
   </section>
@@ -283,9 +293,10 @@ const jsonLd = [
   </section>
 
   <!-- ── TESTIMONIALS ──
-       NOTE: David & Marianne quotes below are AI-DRAFTED PLACEHOLDERS based on the Poggesi
-       engagement. Get their real wording, exact titles, and approval before publishing.
-       No Review/AggregateRating schema added until quotes are confirmed real. -->
+       NOTE: quotes below are AI-DRAFTED based on real engagements. Confirm exact wording +
+       titles with David (Suntyx), Marianne (Poggesi USA), and Gabriela (My Colorful World)
+       before publishing. Add Review/AggregateRating schema only once quotes are confirmed. -->
+
   <section class="testimonials" id="testimonials">
     <div class="testimonials-inner">
       <div class="section-label fade-in">Client Results</div>
@@ -293,16 +304,16 @@ const jsonLd = [
       <p class="section-sub fade-in">We'd rather show than tell — here's what the work looks like for the businesses we partner with.</p>
       <div class="testi-grid">
         <div class="testi fade-in">
-          <p class="testi-quote">Salo connected Claude directly into our NetSuite and the rest of our stack. Work that used to mean digging through systems now happens in a conversation — and our back office runs dramatically leaner. He didn't hand us a strategy deck; he shipped it.</p>
-          <div class="testi-author"><span class="testi-name">David</span><span class="testi-role">Operations · Poggesi USA</span></div>
+          <p class="testi-quote">Salo connected Claude directly into our NetSuite and the rest of our stack. Work that took days now takes minutes — and our back office runs dramatically leaner. He didn't hand us a strategy deck; he shipped it.</p>
+          <div class="testi-author"><span class="testi-name">David</span><span class="testi-role">Founder, Suntyx</span></div>
         </div>
         <div class="testi fade-in">
           <p class="testi-quote">Eloré built us an AI tool that finds the right product from a photo and helps us cost it on the spot. What used to take days of back-and-forth now takes seconds — it's changed how our team quotes and sells.</p>
           <div class="testi-author"><span class="testi-name">Marianne</span><span class="testi-role">Product · Poggesi USA</span></div>
         </div>
-        <div class="testi placeholder fade-in">
-          <p class="testi-quote">Your results could go here. Let's build something worth talking about.</p>
-          <div class="testi-author"><span class="testi-name">Your business</span><span class="testi-role">Let's talk →</span></div>
+        <div class="testi fade-in">
+          <p class="testi-quote">Eloré automated the work that used to eat my week — persona research, blog writing, and wiring our Shopify store into Claude. Now our content and SEO compound on their own, and we're getting discovered in AI search, not just Google.</p>
+          <div class="testi-author"><span class="testi-name">Gabriela</span><span class="testi-role">Founder, My Colorful World</span></div>
         </div>
       </div>
     </div>

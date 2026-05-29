@@ -21,4 +21,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://eloreconsulting.com/sitemap-index.xml
+Sitemap: https://eloreconsulting.com/sitemap.xml
