@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const title = 'AI Insights for Business | Eloré Consulting Blog';
+const description =
+  'Practical, no-fluff articles on putting AI to work in your business — automation, AI search visibility, tool integration, and real case studies. From Eloré Consulting.';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Eloré Consulting Insights',
+    url: 'https://eloreconsulting.com/blog/',
+    publisher: { '@type': 'Organization', name: 'Eloré Consulting', url: 'https://eloreconsulting.com' },
+    blogPost: posts.map((p) => ({
+      '@type': 'BlogPosting',
+      headline: p.data.title,
+      description: p.data.description,
+      datePublished: p.data.pubDate.toISOString(),
+      url: `https://eloreconsulting.com/blog/${p.id}/`,
+    })),
+  },
+];
+---
+<Base title={title} description={description} navSolid={true} jsonLd={jsonLd}>
+  <div class="article-hero">
+    <div class="article-hero-inner">
+      <div class="breadcrumb"><a href="/">Home</a> → Insights</div>
+      <h1>Insights</h1>
+      <div class="article-meta">Practical AI for businesses — automation, AI search visibility, and real case studies.</div>
+    </div>
+  </div>
+
+  <section class="insights">
+    <div class="insights-inner">
+      {posts.length === 0 ? (
+        <p class="section-sub center">New articles are on the way. Check back soon.</p>
+      ) : (
+        <div class="blog-grid">
+          {posts.map((post) => (
+            <a href={`/blog/${post.id}/`} class="post-card fade-in">
+              {post.data.cluster && <div class="post-tag">{post.data.cluster}</div>}
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+              <div class="post-date">
+                {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}
+              </div>
+              <div class="post-more">Read More →</div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,16 @@
+# build output
+dist/
+# astro generated types
+.astro/
+# deps
+node_modules/
+# env & misc
+.env
+.env.production
+.DS_Store
+npm-debug.log*
+
+# local build/run logs
+*.log
+diag.*
+build.log

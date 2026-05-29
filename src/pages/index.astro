@@ -1,0 +1,418 @@
+---
+import Base from '../layouts/Base.astro';
+import AnswerBlock from '../components/AnswerBlock.astro';
+import Faq from '../components/Faq.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const title = 'Eloré Consulting | AI Consultant for Business — Strategy & Implementation';
+const description =
+  'Eloré Consulting helps businesses put AI to work — team training, fractional AI product management, and custom AI development. We implement alongside you, results in weeks. Miami, FL.';
+
+// ── FAQ: decision questions + persona-outcome questions (AEO/GEO targets) ──
+const faqs = [
+  {
+    q: 'What does an AI consultant actually do?',
+    a: '<p>An AI consultant helps a business figure out where AI creates real value, then implements it. At Eloré that means three things: training your team, embedding as a fractional AI lead, or building custom AI tools — and actually shipping the work, not handing over a slide deck.</p>',
+  },
+  {
+    q: 'What can AI do for my business?',
+    a: '<p>More than write emails. The highest-value uses are the boring, repetitive workflows that quietly eat your team\'s week — reporting, data lookups, customer follow-up, research, inventory checks. We start by finding the one or two workflows where AI saves the most time, automate those, and expand from there.</p>',
+  },
+  {
+    q: 'How do I start using AI if I don\'t know where to begin?',
+    a: '<p>You don\'t need an AI strategy. You need one workflow automated by month-end. We run a short Workflow Audit — we watch how your team actually works, name the two or three highest-leverage automations, and ship the first one. Momentum beats a 40-page roadmap every time.</p>',
+  },
+  {
+    q: 'How can AI help me grow sales?',
+    a: '<p>AI takes the busywork out of selling so your team sells more. Think account research drafted in seconds, outreach written in your voice from your CRM data, pipeline follow-ups that don\'t slip, and instant answers to "do we make this / can we deliver by then." We connect AI to tools like your CRM and Apollo so it works from your real data.</p>',
+  },
+  {
+    q: 'How can AI improve my marketing?',
+    a: '<p>AI compresses the slow parts of marketing — first-draft copy, content repurposing, ad variations, audience research, and reporting — so your team spends time on strategy and creative judgment. The goal isn\'t to replace marketers; it\'s to remove the parts of the job that don\'t need a human.</p>',
+  },
+  {
+    q: 'How can AI make my operations more efficient?',
+    a: '<p>By putting an execution layer on top of the systems you already own. Most software stores data but still makes a person click through forms — invoicing, procurement, onboarding, inventory. We connect AI to those systems (read-first, then approved actions) so the work happens with a human approving, not doing, every step.</p>',
+  },
+  {
+    q: 'Can AI help with hiring and recruiting?',
+    a: '<p>Yes — for the repetitive parts. AI can screen and summarize inbound applications, draft job descriptions, structure interview notes, and keep candidates warm with timely follow-up. The hiring decision stays human; the administrative drag around it doesn\'t have to.</p>',
+  },
+  {
+    q: 'Can you connect AI to the tools I already use?',
+    a: '<p>That\'s usually the whole point. We connect AI to the systems you already live in — your CRM, ERP (like NetSuite), Google Workspace, and prospecting tools — so it works from your real data instead of in a separate tab. We start read-only to build trust, then add narrow, approved actions.</p>',
+  },
+  {
+    q: 'How much does AI consulting cost?',
+    a: '<p>It depends on scope, but we keep it simple and month-to-month — no long lock-ins. Engagements typically start with a focused, fixed-scope sprint so you see a working result before committing to more. We\'ll size it honestly on the first call, and if AI isn\'t the right answer for something, we\'ll tell you.</p>',
+  },
+  {
+    q: 'What\'s the difference between a fractional AI product manager and hiring an agency?',
+    a: '<p>An agency typically delivers a project and leaves. A fractional AI product manager embeds with your team — learning your business, prioritizing what to build, and shipping alongside your people so the capability stays after we\'re gone. You get senior, hands-on AI leadership without a full-time executive hire.</p>',
+  },
+  {
+    q: 'How fast will I see results?',
+    a: '<p>Weeks, not quarters. We deliberately start with the highest-impact, lowest-friction workflow so you see something working — and saving time — inside the first month. Bigger custom builds take longer, but we earn that scope by proving value early.</p>',
+  },
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': 'https://eloreconsulting.com/#org',
+    name: 'Eloré Consulting',
+    description:
+      'AI strategy and implementation consulting — team training and workflow integration, fractional AI product management, and custom AI development.',
+    url: 'https://eloreconsulting.com',
+    image: 'https://eloreconsulting.com/images/elore-logo.png',
+    priceRange: '$$',
+    areaServed: [
+      { '@type': 'City', name: 'Miami' },
+      { '@type': 'AdministrativeArea', name: 'South Florida' },
+      { '@type': 'Country', name: 'United States' },
+    ],
+    address: { '@type': 'PostalAddress', addressLocality: 'Miami', addressRegion: 'FL', addressCountry: 'US' },
+    knowsAbout: [
+      'Artificial Intelligence', 'AI Consulting', 'AI Automation', 'Workflow Automation',
+      'Fractional AI Product Management', 'Custom AI Development', 'Retrieval-Augmented Generation',
+      'CRM Automation', 'AI for Small Business', 'Claude', 'Google Workspace AI',
+    ],
+    serviceType: ['AI Consulting', 'AI Training', 'Fractional AI Product Management', 'Custom AI Development'],
+    founder: { '@id': 'https://eloreconsulting.com/#salo' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://eloreconsulting.com/#salo',
+    name: 'Salo Sterental',
+    jobTitle: 'Founder & Principal, Eloré Consulting',
+    description:
+      'Founder of Eloré Consulting and former founder of SoStereo, where he built the entertainment industry\'s first music-recommendation AI for sync licensing. Berklee-trained engineer and AI product builder.',
+    worksFor: { '@id': 'https://eloreconsulting.com/#org' },
+    knowsAbout: ['Artificial Intelligence', 'AI Product Management', 'AI Implementation', 'Automation'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://eloreconsulting.com/#website',
+    name: 'Eloré Consulting',
+    url: 'https://eloreconsulting.com',
+    publisher: { '@id': 'https://eloreconsulting.com/#org' },
+  },
+];
+---
+<Base title={title} description={description} jsonLd={jsonLd}>
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <img class="hero-logo" src="/images/elore-logo.png" alt="Eloré Consulting" width="160" />
+      <div class="hero-badge">AI Strategy &amp; Implementation</div>
+      <h1>AI That Works for <em>Your</em> Business</h1>
+      <p class="hero-sub">Most companies aren't behind on AI — they're behind on questions. Eloré is the AI consultant that cuts through the noise and puts AI to work where it actually moves the needle: smarter workflows, real automation, and custom builds — from your first prompt to a shipped solution.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+        <a href="#services" class="btn btn-secondary">Explore Our Services</a>
+      </div>
+    </div>
+    <div class="hero-waves">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C360,100 720,20 1440,60 L1440,120 L0,120 Z" fill="var(--navy)"></path></svg>
+    </div>
+  </section>
+
+  <!-- ── PILLARS BAR ── -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat-item fade-in"><div class="stat-number">Train</div><div class="stat-label">AI Basics &amp; Workflows</div></div>
+      <div class="stat-item fade-in"><div class="stat-number">Embed</div><div class="stat-label">Fractional AI Leadership</div></div>
+      <div class="stat-item fade-in"><div class="stat-number">Build</div><div class="stat-label">Custom AI Solutions</div></div>
+      <div class="stat-item fade-in"><div class="stat-number">Scale</div><div class="stat-label">Across Your Organization</div></div>
+    </div>
+  </div>
+
+  <!-- ── AEO ANSWER BLOCK ── -->
+  <section class="answer-section">
+    <AnswerBlock eyebrow="In Short" question="What does Eloré Consulting do?">
+      Eloré Consulting is a Miami-based AI consulting firm that helps businesses put AI to work — AI training for your team, fractional AI product management, and custom AI development. We implement the workflows and automation alongside you instead of just advising, with results in weeks, not quarters.
+    </AnswerBlock>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section class="services" id="services">
+    <div class="services-inner">
+      <div class="section-label fade-in">What We Do</div>
+      <h2 class="section-heading fade-in">Three Ways to Work With Us,<br />Depending on Where You Are</h2>
+      <p class="section-sub fade-in">From AI training to fractional AI product management to custom AI development — whether you're just exploring what's possible or ready to build, we meet you where you are and ship working solutions, not 80-page decks.</p>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div>
+          <div class="service-tier">Tier 1 — Learn</div>
+          <h3>AI Foundations &amp; Workflow Integration</h3>
+          <p>Get your team genuinely fluent — not "we watched a webinar" fluent. We teach what AI can actually do, then wire tools like Claude and Lindy into the workflows you already run.</p>
+          <ul class="service-list">
+            <li>Hands-on training for your team</li>
+            <li>Workflow audit to find the automations</li>
+            <li>Tool selection &amp; setup</li>
+            <li>First automation live in weeks</li>
+          </ul>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg></div>
+          <div class="service-tier">Tier 2 — Embed</div>
+          <h3>Fractional AI Product Manager</h3>
+          <p>We embed with your team as a fractional AI lead — part strategist, part operator. We learn your business, map where AI moves the needle, and ship the roadmap alongside your people.</p>
+          <ul class="service-list">
+            <li>Deep-dive into your operations &amp; data</li>
+            <li>AI opportunity map &amp; roadmap</li>
+            <li>Workflow automation &amp; optimization</li>
+            <li>Ongoing strategy and hands-on execution</li>
+          </ul>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
+          <div class="service-tier">Tier 3 — Build</div>
+          <h3>Custom AI Development</h3>
+          <p>When off-the-shelf won't cut it, we product-manage custom builds — RAG over your data, agents on top of your ERP, internal tools that replace five SaaS subscriptions. We've shipped this, not just slide-decked it.</p>
+          <ul class="service-list">
+            <li>Custom AI/ML solutions &amp; agents</li>
+            <li>API integrations &amp; data pipelines</li>
+            <li>RAG &amp; internal tools over your data</li>
+            <li>End-to-end, product-managed delivery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── USE CASES: How can AI help your business ── -->
+  <section class="usecases" id="how-ai-helps">
+    <div class="usecases-inner">
+      <div class="section-label fade-in">What's Possible</div>
+      <h2 class="section-heading fade-in">How Can AI Help Your Business?</h2>
+      <p class="section-sub fade-in">A few real, simple ways small and mid-size businesses are already putting AI to work — most with a human approving before anything sends, posts, or pays. Consider these a starting point, not the whole map.</p>
+      <div class="usecases-grid">
+        <div class="usecase fade-in">
+          <div class="usecase-icon">🎯</div>
+          <h3>Sales Lead Gen &amp; Follow-Up</h3>
+          <p>AI researches each lead, drafts outreach in your voice from your CRM, and chases the follow-ups that usually slip — turning response time from hours into seconds.</p>
+        </div>
+        <div class="usecase fade-in">
+          <div class="usecase-icon">🔍</div>
+          <h3>Marketing &amp; SEO Content</h3>
+          <p>Turn one idea into a week of content, repurpose it across channels, and draft copy built to rank in Google and AI search — so a lean team markets like a much bigger one.</p>
+        </div>
+        <div class="usecase fade-in">
+          <div class="usecase-icon">✉️</div>
+          <h3>Email &amp; Inbox Triage</h3>
+          <p>AI summarizes long threads, surfaces what actually needs a decision, and drafts replies in your tone. You skim and send instead of digging.</p>
+        </div>
+        <div class="usecase fade-in">
+          <div class="usecase-icon">⚙️</div>
+          <h3>Operations &amp; Back Office</h3>
+          <p>Automate the repetitive clicking — invoicing, reconciliation, onboarding, and the weekly report someone rebuilds by hand every Monday.</p>
+        </div>
+        <div class="usecase fade-in">
+          <div class="usecase-icon">🔌</div>
+          <h3>ERP &amp; Tool Integration</h3>
+          <p>Connect AI to NetSuite, your CRM, or Google Workspace so your data becomes a conversation. It drafts and proposes; you approve before anything changes.</p>
+        </div>
+        <div class="usecase fade-in">
+          <div class="usecase-icon">📦</div>
+          <h3>Inventory &amp; Demand Forecasting</h3>
+          <p>Predict stockouts before they happen, flag slow-movers, and draft reorder recommendations from your real sales data — reviewed and approved by your team.</p>
+        </div>
+      </div>
+      <div class="usecases-foot fade-in">
+        <p class="usecases-note">This is far from exhaustive — and the best first automation is usually the workflow you personally dread most. The hard part isn't the AI; it's spotting where it actually pays off in <em>your</em> business.</p>
+        <a href="/blog" class="btn btn-ghost-navy">See More Real Examples on the Blog</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INDUSTRIES ── -->
+  <section class="industries" id="industries">
+    <div class="industries-inner">
+      <div class="section-label fade-in">Who We Work With</div>
+      <h2 class="section-heading fade-in">Focused Expertise Across<br />High-Impact Industries</h2>
+      <p class="section-sub fade-in">We've chosen these verticals because we know them — and because they have the most to gain from AI right now.</p>
+      <div class="industries-grid">
+        <div class="industry-card fade-in"><div class="industry-icon">🎬</div><h3>Entertainment &amp; Content</h3><p>Production, licensing, distribution, creator workflows</p></div>
+        <div class="industry-card fade-in"><div class="industry-icon">📣</div><h3>Marketing &amp; Advertising</h3><p>Campaign ops, creative workflows, analytics, media buying</p></div>
+        <div class="industry-card fade-in"><div class="industry-icon">📈</div><h3>Private Equity</h3><p>Deal flow, portfolio ops, due diligence, reporting</p></div>
+        <div class="industry-card fade-in"><div class="industry-icon">🏢</div><h3>Small &amp; Medium Businesses</h3><p>Operations, customer service, back-office automation</p></div>
+        <div class="industry-card fade-in"><div class="industry-icon">📦</div><h3>Product Businesses</h3><p>Supply chain, inventory, e-commerce, product ops</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── APPROACH ── -->
+  <section class="process" id="approach">
+    <div class="process-inner">
+      <div class="section-label fade-in">Our Approach</div>
+      <h2 class="section-heading fade-in">No Fluff. No 80-Page Decks.<br />Just Results.</h2>
+      <p class="section-sub fade-in">We move fast and focus on impact. Here's the typical engagement arc.</p>
+      <div class="process-steps">
+        <div class="process-step fade-in"><div class="step-number">1</div><h3>Discover</h3><p>We learn your business, your pain points, and where AI makes a real difference — not a theoretical one. Usually a single working session.</p></div>
+        <div class="process-step fade-in"><div class="step-number">2</div><h3>Implement</h3><p>We start with the highest-impact, lowest-friction opportunity. You see results quickly, and we iterate from there. No six-month timelines.</p></div>
+        <div class="process-step fade-in"><div class="step-number">3</div><h3>Scale</h3><p>Once the first wins are in, we expand — deeper integrations, custom builds, team training. AI becomes part of how your company operates.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-visual fade-in">
+        <div class="about-visual-box"><img src="/images/salo-headshot.jpg" alt="Salo Sterental, founder of Eloré Consulting" width="420" height="420" /></div>
+      </div>
+      <div class="about-text">
+        <div class="section-label fade-in">Why Eloré</div>
+        <h2 class="section-heading fade-in">Built by a Founder Who's Done It Before</h2>
+        <p class="section-sub fade-in">Eloré Consulting is led by Salo Sterental — former founder of SoStereo, where he built the entertainment industry's first music-recommendation AI for sync licensing and grew the company to millions in revenue. A Berklee-trained engineer and AI product builder, he now helps businesses across industries put that same kind of AI thinking to work.</p>
+        <div class="about-features fade-in">
+          <div class="about-feature"><div class="about-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07a28" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="about-feature-text"><h3>Operator, Not Just Advisor</h3><p>We don't just recommend — we roll up our sleeves and implement alongside your team.</p></div></div>
+          <div class="about-feature"><div class="about-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07a28" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="about-feature-text"><h3>Tools That Actually Work</h3><p>We work with proven platforms like Claude and Lindy, plus custom builds — not vaporware.</p></div></div>
+          <div class="about-feature"><div class="about-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a07a28" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="about-feature-text"><h3>Results in Weeks, Not Quarters</h3><p>We focus on high-impact, quick-win opportunities first — then scale from a foundation of proven ROI.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ──
+       NOTE: David & Marianne quotes below are AI-DRAFTED PLACEHOLDERS based on the Poggesi
+       engagement. Get their real wording, exact titles, and approval before publishing.
+       No Review/AggregateRating schema added until quotes are confirmed real. -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-inner">
+      <div class="section-label fade-in">Client Results</div>
+      <h2 class="section-heading fade-in">Results, in Their Words</h2>
+      <p class="section-sub fade-in">We'd rather show than tell — here's what the work looks like for the businesses we partner with.</p>
+      <div class="testi-grid">
+        <div class="testi fade-in">
+          <p class="testi-quote">Salo connected Claude directly into our NetSuite and the rest of our stack. Work that used to mean digging through systems now happens in a conversation — and our back office runs dramatically leaner. He didn't hand us a strategy deck; he shipped it.</p>
+          <div class="testi-author"><span class="testi-name">David</span><span class="testi-role">Operations · Poggesi USA</span></div>
+        </div>
+        <div class="testi fade-in">
+          <p class="testi-quote">Eloré built us an AI tool that finds the right product from a photo and helps us cost it on the spot. What used to take days of back-and-forth now takes seconds — it's changed how our team quotes and sells.</p>
+          <div class="testi-author"><span class="testi-name">Marianne</span><span class="testi-role">Product · Poggesi USA</span></div>
+        </div>
+        <div class="testi placeholder fade-in">
+          <p class="testi-quote">Your results could go here. Let's build something worth talking about.</p>
+          <div class="testi-author"><span class="testi-name">Your business</span><span class="testi-role">Let's talk →</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <Faq
+    label="Questions, Answered"
+    heading="What Businesses Ask Us About AI"
+    sub="Straight answers to what AI can do for your business — and how we help you get there."
+    items={faqs}
+  />
+
+  <!-- ── INSIGHTS / BLOG TEASER ── -->
+  {posts.length > 0 && (
+    <section class="insights" id="insights">
+      <div class="insights-inner">
+        <div class="insights-head">
+          <div>
+            <div class="section-label fade-in">Insights</div>
+            <h2 class="section-heading fade-in" style="margin-bottom:0;">From the Eloré Blog</h2>
+          </div>
+          <a href="/blog" class="btn btn-ghost-navy">View All Insights</a>
+        </div>
+        <div class="blog-grid">
+          {posts.map((post) => (
+            <a href={`/blog/${post.id}/`} class="post-card fade-in">
+              {post.data.cluster && <div class="post-tag">{post.data.cluster}</div>}
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+              <div class="post-more">Read More →</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ── CTA / CONTACT ── -->
+  <section class="cta-section" id="contact">
+    <div class="cta-inner fade-in">
+      <div class="section-label">Let's Talk</div>
+      <h2>Ready to See What AI Can Actually Do for Your Business?</h2>
+      <p class="cta-lead">We'll start with a conversation — no pitch, no pressure. Just an honest look at where AI fits in your world.</p>
+      <p class="contact-direct">Prefer email? Reach us directly at <a href="mailto:salo@theeloregroup.com">salo@theeloregroup.com</a></p>
+
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/salo@theeloregroup.com" method="POST">
+        <input type="hidden" name="_subject" value="New AI Consulting Inquiry — Eloré Consulting" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_cc" value="salo.sterental@gmail.com" />
+        <input type="text" name="_honey" style="display:none" />
+        <input type="hidden" name="_next" id="formNext" />
+        <div class="form-row">
+          <div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" name="First Name" placeholder="John" required /></div>
+          <div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" name="Last Name" placeholder="Smith" required /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="Email" placeholder="john@company.com" required /></div>
+          <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="Phone" placeholder="(305) 555-1234" /></div>
+        </div>
+        <div class="form-group"><label for="company">Company Name</label><input type="text" id="company" name="Company Name" placeholder="Your company name" required /></div>
+        <div class="form-group">
+          <label for="industry">Industry</label>
+          <select id="industry" name="Industry" required>
+            <option value="" disabled selected>Select your industry</option>
+            <option>Entertainment &amp; Content</option>
+            <option>Marketing &amp; Advertising</option>
+            <option>Private Equity</option>
+            <option>Small / Medium Business</option>
+            <option>Product Business</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="interest">What Are You Most Interested In?</label>
+          <select id="interest" name="Service Interest" required>
+            <option value="" disabled selected>Select a service tier</option>
+            <option>AI Training &amp; Workflow Integration</option>
+            <option>Fractional AI Product Manager</option>
+            <option>Custom AI Development</option>
+            <option>Not sure yet — let's talk</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="message">Tell Us About Your Goals</label><textarea id="message" name="Message" placeholder="What challenges are you looking to solve with AI? Any specific workflows, tools, or outcomes in mind?"></textarea></div>
+        <button type="submit" class="btn btn-primary form-submit-btn" id="submitBtn">Send Inquiry</button>
+        <p class="form-note">We typically respond within 24 hours.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c49a3c" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <h3>We Got Your Message!</h3>
+        <p>Thanks for reaching out. We'll be in touch within 24 hours to discuss how AI can work for your business.</p>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    (function () {
+      var form = document.getElementById('contactForm');
+      var success = document.getElementById('formSuccess');
+      var btn = document.getElementById('submitBtn');
+      var next = document.getElementById('formNext');
+      if (next) next.value = window.location.href.split('?')[0] + '?submitted=true#contact';
+      if (window.location.search.indexOf('submitted=true') !== -1 && form && success) {
+        form.style.display = 'none';
+        success.classList.add('show');
+        history.replaceState({}, '', window.location.pathname + '#contact');
+      }
+      if (form && btn) form.addEventListener('submit', function () { btn.textContent = 'Sending...'; btn.disabled = true; });
+    })();
+  </script>
+</Base>

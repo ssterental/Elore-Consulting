@@ -1,0 +1,39 @@
+---
+// Renders an accessible, no-JS FAQ (details/summary — always in the DOM for
+// crawlers) AND emits matching FAQPage JSON-LD for AEO/rich results.
+export interface FaqItem { q: string; a: string; }
+export interface Props {
+  items: FaqItem[];
+  heading?: string;
+  label?: string;
+  sub?: string;
+  emitSchema?: boolean;
+}
+const { items, heading, label, sub, emitSchema = true } = Astro.props;
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((it) => ({
+    '@type': 'Question',
+    name: it.q,
+    acceptedAnswer: { '@type': 'Answer', text: it.a },
+  })),
+};
+---
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    {label && <div class="section-label fade-in">{label}</div>}
+    {heading && <h2 class="section-heading fade-in">{heading}</h2>}
+    {sub && <p class="section-sub fade-in">{sub}</p>}
+    <div class="faq-list">
+      {items.map((it) => (
+        <details class="faq-item">
+          <summary>{it.q}</summary>
+          <div class="faq-answer" set:html={it.a} />
+        </details>
+      ))}
+    </div>
+  </div>
+  {emitSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+</section>

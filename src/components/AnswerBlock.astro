@@ -1,0 +1,14 @@
+---
+// AEO 40-word answer block. Renders the definition AI engines extract/quote.
+export interface Props {
+  question?: string;
+  eyebrow?: string;
+  onDark?: boolean;
+}
+const { question, eyebrow, onDark = false } = Astro.props;
+---
+<div class:list={['answer-block', { 'on-dark': onDark }]}>
+  {eyebrow && <div class="answer-eyebrow">{eyebrow}</div>}
+  {question && <p class="answer-q">{question}</p>}
+  <p><slot /></p>
+</div>

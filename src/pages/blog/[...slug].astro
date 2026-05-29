@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+import AnswerBlock from '../../components/AnswerBlock.astro';
+import Faq from '../../components/Faq.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const d = post.data;
+
+const url = `https://eloreconsulting.com/blog/${post.id}/`;
+const pub = d.pubDate.toISOString();
+const upd = (d.updatedDate ?? d.pubDate).toISOString();
+const fmtDate = d.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+
+const jsonLd: Record<string, any>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: d.title,
+    description: d.description,
+    datePublished: pub,
+    dateModified: upd,
+    author: { '@type': 'Person', name: 'Salo Sterental', url: 'https://eloreconsulting.com/#salo' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Eloré Consulting',
+      logo: { '@type': 'ImageObject', url: 'https://eloreconsulting.com/images/elore-logo.png' },
+    },
+    mainEntityOfPage: url,
+    ...(d.image ? { image: new URL(d.image, 'https://eloreconsulting.com').href } : {}),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://eloreconsulting.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://eloreconsulting.com/blog/' },
+      { '@type': 'ListItem', position: 3, name: d.title, item: url },
+    ],
+  },
+];
+---
+<Base title={`${d.title} | Eloré Consulting`} description={d.description} ogType="article" navSolid={true} jsonLd={jsonLd}>
+  <article>
+    <div class="article-hero">
+      <div class="article-hero-inner">
+        <div class="breadcrumb"><a href="/">Home</a> → <a href="/blog">Insights</a> → {d.cluster ?? 'Article'}</div>
+        <h1>{d.title}</h1>
+        <div class="article-meta">
+          {fmtDate}{d.persona ? ` · For ${d.persona}` : ''}
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      {d.answer && <AnswerBlock>{d.answer}</AnswerBlock>}
+      <Content />
+    </div>
+
+    {d.faqs && d.faqs.length > 0 && (
+      <Faq label="FAQ" heading="Frequently Asked Questions" items={d.faqs} />
+    )}
+
+    <section class="cta-section">
+      <div class="cta-inner">
+        <h2>Want to put this to work in your business?</h2>
+        <p class="cta-lead">We'll start with a conversation — no pitch, no pressure. Just an honest look at where AI fits in your world.</p>
+        <a href="/#contact" class="btn btn-primary">Start a Conversation</a>
+      </div>
+    </section>
+  </article>
+</Base>
