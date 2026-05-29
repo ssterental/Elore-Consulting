@@ -24,7 +24,7 @@ A salesperson stands in front of a client who wants *that* piece — the one in 
 
 That's where this story starts. Not with AI. With a lost week, and the deals that quietly die inside it.
 
-The why first, because it's the whole point: speed isn't a nice-to-have in sales — it's the sale. When a client has to wait seven days to find out whether you make what they want, you haven't given them a quote. You've given them time to call someone else.
+The why first, because it's the whole point: speed isn't a nice-to-have in sales — it's the sale. [Classic HBR research on lead response](https://hbr.org/2011/03/the-short-life-of-online-sales-leads) found that contacting a prospect within five minutes makes you vastly more likely to win them than waiting even thirty. When a client has to wait seven days to find out whether you make what they want, you haven't given them a quote. You've given them time to call someone else.
 
 ## What was the problem?
 

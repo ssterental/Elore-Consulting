@@ -73,7 +73,7 @@ Don't start with the highest-stakes workflow in the building. Start with the mos
 
 ## Is Google Workspace AI safe for business data?
 
-Reasonably — if you set it up like an adult. Native Gemini in Workspace runs under Google's enterprise data protections, and connected tools should run under clear permissions: who can access what, what the AI can read versus change, and an audit trail. The mistake isn't using AI on business data. The mistake is using it without deciding those rules first.
+Reasonably — if you set it up like an adult. Native Gemini in Workspace runs under [Google's enterprise data protections](https://support.google.com/docs/answer/14615114) — your prompts and responses aren't used to train models without permission and stay within your organization — and connected tools should run under clear permissions: who can access what, what the AI can read versus change, and an audit trail. The mistake isn't using AI on business data. The mistake is using it without deciding those rules first.
 
 If your business handles regulated or client-privileged data, get the governance written down before the first workflow ships — not after. That's not bureaucracy. That's the thing that lets you say yes to the rest.
 
