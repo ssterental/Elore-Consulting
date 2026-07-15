@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import AnswerBlock from '../components/AnswerBlock.astro';
 import Faq from '../components/Faq.astro';
 import { getCollection } from 'astro:content';
+import { BOOKING_EMBED_SRC, BOOKING_IS_PLACEHOLDER, OFFER_NAME } from '../consts';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -359,6 +360,23 @@ const jsonLd = [
       <h2>Ready to See What AI Can Actually Do for Your Business?</h2>
       <p class="cta-lead">We'll start with a conversation — no pitch, no pressure. Just an honest look at where AI fits in your world.</p>
       <p class="contact-direct">Prefer email? Reach us directly at <a href="mailto:salo@theeloregroup.com">salo@theeloregroup.com</a></p>
+
+      {!BOOKING_IS_PLACEHOLDER && (
+        <div class="home-booking" id="book">
+          <div class="home-booking-label">{OFFER_NAME}</div>
+          <div class="booking-embed">
+            <iframe
+              src={BOOKING_EMBED_SRC}
+              title="Book a free 15-minute AI Visibility Review with Eloré Consulting"
+              loading="lazy"
+              width="100%"
+              height="600"
+              style="border:0"
+            ></iframe>
+          </div>
+          <p class="home-booking-or">Prefer to write first? Send a message below.</p>
+        </div>
+      )}
 
       <form class="contact-form" id="contactForm" action="https://formsubmit.co/salo@theeloregroup.com" method="POST">
         <input type="hidden" name="_subject" value="New AI Consulting Inquiry — Eloré Consulting" />

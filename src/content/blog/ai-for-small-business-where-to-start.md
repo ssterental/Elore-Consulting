@@ -33,6 +33,7 @@ Forget the headlines about AI replacing everything. In a real small business, th
 - Pull the numbers and write the weekly report someone rebuilds by hand
 - Research leads and draft first-pass outreach
 - Answer the same customer questions you answer fifty times a week
+- Make sure AI search tools can actually find you — [businesses invisible to ChatGPT](/blog/is-your-business-invisible-to-chatgpt/) quietly lose customers to competitors the AI *does* know about
 
 It's less "robot takeover" and more — as one builder hoped — *"everyone can have their own personal AI expert, or a whole team of them."* That's the right mental model: a fast assistant for everyone, not a replacement for anyone.
 

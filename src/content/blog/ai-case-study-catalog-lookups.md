@@ -63,7 +63,7 @@ Ask yourself three questions.
 
 Do your systems *store* more than they *execute* — i.e., is your team the integration layer between tools that don't talk? Is there a moment in your sales or ops process where a customer waits days for an answer that should take minutes? And is the knowledge that unblocks them trapped in a few people's heads?
 
-If you said yes to two of those, there's leverage sitting in your business right now. It doesn't require a year-long transformation or a data-science team. It requires connecting what you already have and putting an execution layer on top.
+If you said yes to two of those, there's leverage sitting in your business right now. It doesn't require a year-long transformation or a data-science team. It requires connecting what you already have and putting an execution layer on top — often starting with the tools you already open every day, like [AI inside Google Workspace](/blog/google-workspace-ai/).
 
 That's the work. Not buying more software. Making the software you own finally answer the question in front of you.
 

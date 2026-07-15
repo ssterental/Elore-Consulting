@@ -30,7 +30,7 @@ That last one is the why behind this whole post: the fastest way to spot a real 
 
 Cut through the title. A real AI consultant does four things, in roughly this order: figures out where AI actually creates value in *your* business, implements it (training, automation, integration, or a custom build), proves it saved time or made money, and leaves your team able to keep going.
 
-The key word is **implements.** The difference between a useful consultant and an expensive one is whether they ship working systems or hand you a strategy and walk away.
+The key word is **implements.** The difference between a useful consultant and an expensive one is whether they ship working systems or hand you a strategy and walk away. That work ranges widely — from automating your Monday report to [fixing why your business is invisible to ChatGPT](/blog/is-your-business-invisible-to-chatgpt/) — but the through-line is always whether they *ship* it, not slide it.
 
 ## How do you separate substance from hype?
 

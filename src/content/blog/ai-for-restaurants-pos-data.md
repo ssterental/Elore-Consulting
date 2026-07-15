@@ -36,6 +36,8 @@ Plenty — as long as you aim at the workflows around the point of sale, not ins
 
 None of these need deep POS surgery. All of them give a short-staffed restaurant back hours.
 
+There's also a newer front you can't ignore: whether ChatGPT and Google's AI actually recommend your restaurant when a diner asks "where should I eat in Wynwood?" [If your business is invisible to ChatGPT](/blog/is-your-business-invisible-to-chatgpt/), you're losing covers you never see — and no POS integration fixes that.
+
 ## Can AI connect to Square, Toast, or Clover?
 
 Partially — and you should go in clear-eyed. These platforms are relatively closed; their APIs are limited and, as that builder put it, "politically controlled." AI can usually work with the data you can reach — exports, available endpoints, the items and sales you can pull — and automate the workflows around it. What it can't reliably do yet is deep, real-time, two-way automation inside a locked POS. Plan around the wall instead of pretending it isn't there.

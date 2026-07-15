@@ -37,7 +37,7 @@ Think of it less like a smarter search box and more like a fast, tireless junior
 Skip the sci-fi. Here's what holds up in a real business this quarter:
 
 - **Research & monitoring** — competitor scans, prospect research, watching a dashboard and flagging what changed.
-- **Drafting** — outreach in your voice from your CRM, first-pass content, the weekly report nobody wants to write.
+- **Drafting** — outreach in your voice from your CRM, first-pass content, the weekly report nobody wants to write (often [right inside Google Workspace](/blog/google-workspace-ai/)).
 - **Triage** — sorting inbox and tickets, surfacing the three things that actually need you.
 - **Routine ops** — the recurring, rules-light tasks that happen the same way every week.
 

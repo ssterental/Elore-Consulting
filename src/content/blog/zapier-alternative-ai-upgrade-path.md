@@ -52,7 +52,7 @@ Don't rip everything out. That's its own kind of waste.
 
 ## Where to start
 
-Pick the one workflow that breaks most often or costs you the most — in dollars or in babysitting — and rebuild just that, AI-driven, with a human on the approvals. Prove it's steadier and cheaper. Then move to the next.
+Pick the one workflow that breaks most often or costs you the most — in dollars or in babysitting — and rebuild just that, AI-driven, with a human on the approvals. Prove it's steadier and cheaper. Then move to the next. And if that workflow lives in Gmail, Docs, or Sheets, start where the work already happens — here's [what Google Workspace AI can actually do](/blog/google-workspace-ai/).
 
 You don't need to declare war on Zapier. You need to stop letting your most important automations run on something that gets more fragile the more you depend on it.
 
