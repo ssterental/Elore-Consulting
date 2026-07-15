@@ -2,6 +2,7 @@
 title: "Google Workspace AI: What It Can Actually Do for Your Business"
 description: "Google Workspace AI can draft, summarize, and automate work across Gmail, Docs, and Sheets. Here's what it actually does for a business — and where to start."
 pubDate: 2026-05-28
+updatedDate: 2026-07-15
 primaryKeyword: "google workspace ai"
 cluster: "AI Tools & Integration"
 persona: "Owners & operators exploring AI"

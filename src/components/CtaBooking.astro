@@ -1,0 +1,53 @@
+---
+// Reusable booking CTA for the "Free 15-Minute AI Visibility Review" offer.
+// `section` = full-width navy band with the live Google Calendar booking embed.
+//   Has id="book" so mid-article inline CTAs can smooth-scroll to it (href="#book").
+// `inline` = lighter callout that fits inside .article-body; links down to #book.
+import { BOOKING_EMBED_SRC, BOOKING_HREF, BOOKING_IS_PLACEHOLDER, OFFER_NAME } from '../consts';
+
+export interface Props {
+  variant?: 'section' | 'inline';
+  heading?: string;
+  lead?: string;
+  ctaLabel?: string;
+}
+
+const {
+  variant = 'section',
+  heading = 'See exactly what AI says about your business',
+  lead =
+    "Book a free 15-minute AI Visibility Review. We'll run the ChatGPT and Perplexity checks on your business live, show you where you're invisible, outdated, or wrong — and hand you the fix list. No pitch, no pressure.",
+  ctaLabel = 'Book your free 15-min review',
+} = Astro.props;
+
+const fallbackAttrs = BOOKING_IS_PLACEHOLDER ? {} : { target: '_blank', rel: 'noopener' };
+---
+{variant === 'section' ? (
+  <section class="cta-section cta-booking" id="book">
+    <div class="cta-inner fade-in">
+      <div class="section-label">{OFFER_NAME}</div>
+      <h2>{heading}</h2>
+      <p class="cta-lead">{lead}</p>
+      {BOOKING_IS_PLACEHOLDER ? (
+        <a href={BOOKING_HREF} class="btn btn-primary" {...fallbackAttrs}>{ctaLabel} <span class="arrow">→</span></a>
+      ) : (
+        <div class="booking-embed">
+          <iframe
+            src={BOOKING_EMBED_SRC}
+            title="Book a free 15-minute AI Visibility Review with Eloré Consulting"
+            loading="lazy"
+            width="100%"
+            height="600"
+            style="border:0"
+          ></iframe>
+        </div>
+      )}
+    </div>
+  </section>
+) : (
+  <aside class="cta-inline" aria-label={OFFER_NAME}>
+    <div class="cta-inline-eyebrow">{OFFER_NAME}</div>
+    <p class="cta-inline-lead">{lead}</p>
+    <a href={BOOKING_HREF} class="btn btn-primary">{ctaLabel} <span class="arrow">→</span></a>
+  </aside>
+)}

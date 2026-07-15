@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import AnswerBlock from '../../components/AnswerBlock.astro';
 import Faq from '../../components/Faq.astro';
+import CtaBooking from '../../components/CtaBooking.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -67,12 +68,6 @@ const jsonLd: Record<string, any>[] = [
       <Faq label="FAQ" heading="Frequently Asked Questions" items={d.faqs} />
     )}
 
-    <section class="cta-section">
-      <div class="cta-inner">
-        <h2>Want to put this to work in your business?</h2>
-        <p class="cta-lead">We'll start with a conversation — no pitch, no pressure. Just an honest look at where AI fits in your world.</p>
-        <a href="/#contact" class="btn btn-primary">Start a Conversation</a>
-      </div>
-    </section>
+    <CtaBooking />
   </article>
 </Base>

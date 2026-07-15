@@ -267,6 +267,17 @@ section { padding: 6.5rem 2rem; }
 .cta-section h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; letter-spacing: -0.02em; color: var(--t-light); margin-bottom: 1rem; line-height: 1.12; }
 .cta-section .cta-lead { font-size: 1.08rem; color: var(--t-light-soft); margin-bottom: 2.5rem; line-height: 1.7; }
 .cta-section .btn-primary { padding: 0.95rem 2.2rem; }
+
+/* Mid-article booking callout (CtaBooking variant="inline" + raw-HTML .cta-inline in posts) */
+.cta-inline { background: var(--paper-2); border: 1px solid var(--line-light); border-left: 3px solid var(--gold); border-radius: 10px; padding: 1.6rem 1.75rem; margin: 2.5rem 0; }
+.cta-inline .cta-inline-eyebrow { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.02em; color: var(--gold-deep); margin-bottom: 0.6rem; }
+.cta-inline .cta-inline-lead { font-size: 1.04rem; color: var(--t-dark); line-height: 1.65; margin-bottom: 1.25rem; }
+.cta-inline .btn-primary { font-size: 0.9rem; }
+
+/* Live Google Calendar booking embed inside the navy CTA band */
+.cta-booking .cta-inner { max-width: 760px; }
+.booking-embed { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 16px 40px rgba(15,33,56,0.28); }
+.booking-embed iframe { display: block; width: 100%; min-height: 600px; }
 .contact-direct { margin-top: 1.4rem; font-size: 0.92rem; color: var(--t-light-soft); }
 .contact-direct a { color: var(--gold-1); text-decoration: none; font-weight: 500; }
 .contact-direct a:hover { text-decoration: underline; }

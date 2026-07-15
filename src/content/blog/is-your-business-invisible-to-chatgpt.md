@@ -2,11 +2,16 @@
 title: "Is Your Business Invisible to ChatGPT? How to Check and Fix It"
 description: "More customers ask ChatGPT for recommendations before they ask Google. Here's how to see what AI says about your business — and fix it when it's wrong or missing."
 pubDate: 2026-05-29
+updatedDate: 2026-07-15
 primaryKeyword: "chatgpt for business"
 cluster: "AI Visibility"
 persona: "Local & service business owners"
 answer: "AI search visibility is whether AI tools like ChatGPT, Perplexity, and Google's AI answers mention your business — accurately — when someone asks for a recommendation. A business can rank fine on Google yet be missing, outdated, or wrong in AI answers, quietly losing customers it never sees."
 faqs:
+  - q: "Why is my business not showing up in ChatGPT?"
+    a: "Because AI assistants answer from patterns across the public web — your site, reviews, directories, and mentions — not a live lookup. If your information is thin, inconsistent, or stale, the AI can't confidently name you, so it stays vague or recommends a competitor it's more sure about. The fix is making your facts consistent and machine-readable everywhere."
+  - q: "Why is my B2B SaaS company invisible in ChatGPT search results?"
+    a: "B2B and SaaS companies are often invisible in ChatGPT because their category is defined by third-party sources — review sites, comparison pages, analyst mentions, and documentation — more than by their own homepage. If those sources don't consistently describe what you do, for whom, and how you differ, the model has little to cite. Building consistent, structured, frequently-referenced information across the web is what moves you from absent to recommended."
   - q: "How do I see what ChatGPT says about my business?"
     a: "Open ChatGPT (or Perplexity, or Google's AI answers) and ask the questions a customer would: 'best [your service] in [your city],' then 'tell me about [your business name].' Note whether you show up, whether the details are right, and which competitors appear instead. It takes about five minutes and it's the fastest way to find the gap."
   - q: "Why does ChatGPT recommend my competitors instead of me?"
@@ -28,7 +33,7 @@ It's a quietly unsettling moment, and it's becoming common. One owner, posting i
 
 Here's why this matters, and it's the whole point: your customers are starting to ask AI before they ask Google. If the AI gets you wrong — or skips you entirely — you lose the deal before you ever knew there was one. There's no missed-call log for a recommendation that never happened.
 
-## Why is my business invisible to ChatGPT?
+## Why is my business not showing up in ChatGPT?
 
 AI assistants don't "look up" your business the way a directory does. They answer from patterns across the public web — your site, your reviews, your listings, the times you're mentioned elsewhere. So two things make a business invisible:
 
@@ -47,6 +52,12 @@ You don't need a tool or a consultant for the first look. Spend five minutes:
 3. Repeat in **Perplexity and Google's AI answers** — they pull differently, and the gaps aren't always the same.
 
 Write down what's wrong, missing, or outdated. That list *is* your fix list. Most owners are surprised — and a little rattled — by what they find.
+
+<aside class="cta-inline" aria-label="Free 15-Minute AI Visibility Review">
+  <div class="cta-inline-eyebrow">Free 15-Minute AI Visibility Review</div>
+  <p class="cta-inline-lead">Don't like what the five-minute check turned up? We'll run the full version with you — live — and hand you the exact list of what's making you invisible, outdated, or wrong in AI answers. Free, 15 minutes, no pitch.</p>
+  <a href="#book" class="btn btn-primary">Book your free 15-min review →</a>
+</aside>
 
 ## How do I fix wrong or missing AI information?
 
