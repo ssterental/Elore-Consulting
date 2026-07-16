@@ -336,6 +336,12 @@ section { padding: 6.5rem 2rem; }
 .article-body a { color: var(--gold-deep); text-decoration: underline; text-underline-offset: 2px; }
 .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.5rem 0 0.5rem 1.5rem; font-family: var(--font-display); font-size: 1.3rem; font-style: normal; color: var(--t-dark); line-height: 1.45; }
 .article-body code { background: rgba(16,22,40,0.06); font-family: var(--font-mono); padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.88em; }
+.article-body .table-wrap, .article-body table { display: block; overflow-x: auto; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 1.75rem 0; font-size: 0.96rem; }
+.article-body th, .article-body td { text-align: left; padding: 0.7rem 0.9rem; border: 1px solid var(--line-light); vertical-align: top; }
+.article-body thead th { background: var(--paper-2); font-family: var(--font-display); font-weight: 600; color: var(--t-dark); }
+.article-body tbody td { color: var(--t-dark-soft); }
+.article-body tbody td strong { color: var(--t-dark); }
 
 /* ── FOOTER ── */
 .footer { background: var(--ink); padding: 3.5rem 2rem 2.5rem; text-align: center; border-top: 1px solid var(--line-dark); }

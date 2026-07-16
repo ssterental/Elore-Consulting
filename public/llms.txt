@@ -16,7 +16,9 @@ We focus on four verticals we've operated in first-hand — manufacturing, direc
 - Contact: https://eloreconsulting.com/#contact
 
 ## Articles
+- Claude for Small Business — how to set it up and use it: https://eloreconsulting.com/blog/claude-for-small-business/
 - Google Workspace AI — what it can do for your business: https://eloreconsulting.com/blog/google-workspace-ai/
+- Is your business invisible to ChatGPT — AI search visibility: https://eloreconsulting.com/blog/is-your-business-invisible-to-chatgpt/
 - Case study — AI cut catalog lookups from 7 days to seconds: https://eloreconsulting.com/blog/ai-case-study-catalog-lookups/
 
 ## Contact

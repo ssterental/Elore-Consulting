@@ -53,7 +53,7 @@ That's the line. An agent can prepare the invoice, but a human should approve th
 
 The same way we start every engagement: small, scoped, supervised.
 
-1. **Pick one repetitive workflow** you already dread — the morning research, the follow-ups, the report.
+1. **Pick one repetitive workflow** you already dread — the morning research, the follow-ups, the report. (New to the tool? Start with [how to set up Claude for your business](/blog/claude-for-small-business/).)
 2. **Give read-only access first**, then add narrow actions the agent can propose but not finalize.
 3. **Keep a human on every send, post, or payment.**
 4. **Prove it, document it, expand it** — one workflow at a time.

@@ -41,7 +41,7 @@ There are two layers, and people conflate them.
 
 The first is **native** — Google's own Gemini features baked into Workspace: "help me write" in Gmail and Docs, summaries in Drive, formula and table generation in Sheets. Useful, improving fast, and included or low-cost on most business plans.
 
-The second is **connected** — bringing a model like Claude or ChatGPT *to* your Workspace data through integrations, so an AI can read a folder of contracts, pull numbers across ten Sheets, or draft replies in your team's actual voice using your real history. This is where the leverage compounds, because the AI stops being a clever sidebar and starts doing [end-to-end tasks that an agent can run](/blog/claude-as-coo-what-ai-agents-can-run/).
+The second is **connected** — bringing a model like Claude or ChatGPT *to* your Workspace data through integrations, so an AI can read a folder of contracts, pull numbers across ten Sheets, or draft replies in your team's actual voice using your real history. (If Claude is your model of choice, here's [how to set up Claude for your business](/blog/claude-for-small-business/).) This is where the leverage compounds, because the AI stops being a clever sidebar and starts doing [end-to-end tasks that an agent can run](/blog/claude-as-coo-what-ai-agents-can-run/).
 
 Native gets you started. Connected is where small teams punch above their weight.
 
