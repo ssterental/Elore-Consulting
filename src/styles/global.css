@@ -176,7 +176,7 @@ section { padding: 6.5rem 2rem; }
 .industries { background: var(--paper); }
 .industries-inner { max-width: var(--maxw); margin: 0 auto; }
 .industries .section-sub { margin-bottom: 3rem; }
-.industries-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border: 1px solid var(--line-light); border-radius: 12px; overflow: hidden; background: var(--card); }
+.industries-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line-light); border-radius: 12px; overflow: hidden; background: var(--card); }
 .industry-card { padding: 2rem 1.5rem; position: relative; transition: background .3s; border-right: 1px solid var(--line-light); }
 .industry-card:last-child { border-right: none; }
 .industry-card:hover { background: var(--paper-2); }

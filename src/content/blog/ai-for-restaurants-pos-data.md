@@ -1,5 +1,5 @@
 ---
-title: "AI for Restaurants: Getting Past the Square/Toast/Clover Data Wall"
+title: "AI for Restaurants: What It Actually Does (and Where Your POS Blocks It)"
 description: "Restaurant data is trapped in closed POS systems. Here's where AI realistically helps restaurants today — comms, reviews, scheduling, inventory — and where the POS still blocks it."
 pubDate: 2026-05-21
 primaryKeyword: "ai for restaurants"

@@ -9,9 +9,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 
-const title = 'Eloré Consulting — AI Consultant for Business, Miami';
+const title = 'AI Consultant for Business in Miami | Eloré Consulting';
 const description =
-  'Eloré Consulting — an AI consultant for Miami businesses. AI training, fractional AI product management, and custom development, built alongside your team.';
+  'AI consulting that ships in weeks, not decks — for manufacturing, D2C, marketing, and home-services teams. Book a free 15-minute AI Visibility Review.';
 
 // ── FAQ: decision questions + persona-outcome questions (AEO/GEO targets) ──
 const faqs = [
@@ -82,6 +82,9 @@ const jsonLd = [
       'Artificial Intelligence', 'AI Consulting', 'AI Automation', 'Workflow Automation',
       'Fractional AI Product Management', 'Custom AI Development', 'Retrieval-Augmented Generation',
       'CRM Automation', 'AI for Small Business', 'Claude', 'Google Workspace AI',
+      'AI for Manufacturing', 'AI for E-commerce', 'AI for Direct-to-Consumer Brands',
+      'AI for Marketing', 'AI for Home Services', 'Answer Engine Optimization',
+      'Generative Engine Optimization',
     ],
     serviceType: ['AI Consulting', 'AI Training', 'Fractional AI Product Management', 'Custom AI Development'],
     sameAs: ['https://www.linkedin.com/in/salosterental'],
@@ -248,14 +251,13 @@ const jsonLd = [
   <section class="industries" id="industries">
     <div class="industries-inner">
       <div class="section-label fade-in">Who We Work With</div>
-      <h2 class="section-heading fade-in">Focused Expertise Across<br />High-Impact Industries</h2>
-      <p class="section-sub fade-in">We've chosen these verticals because we know them — and because they have the most to gain from AI right now.</p>
+      <h2 class="section-heading fade-in">Four Industries We Know<br />From the Inside</h2>
+      <p class="section-sub fade-in">We go deep in a few verticals we've actually operated in — not a menu of everything. If we haven't lived your problem, we'll tell you.</p>
       <div class="industries-grid">
-        <div class="industry-card fade-in"><div class="industry-index">01</div><h3>Entertainment &amp; Content</h3><p>Production, licensing, distribution, creator workflows</p></div>
-        <div class="industry-card fade-in"><div class="industry-index">02</div><h3>Marketing &amp; Advertising</h3><p>Campaign ops, creative workflows, analytics, media buying</p></div>
-        <div class="industry-card fade-in"><div class="industry-index">03</div><h3>Private Equity</h3><p>Deal flow, portfolio ops, due diligence, reporting</p></div>
-        <div class="industry-card fade-in"><div class="industry-index">04</div><h3>Small &amp; Medium Businesses</h3><p>Operations, customer service, back-office automation</p></div>
-        <div class="industry-card fade-in"><div class="industry-index">05</div><h3>Product Businesses</h3><p>Supply chain, inventory, e-commerce, product ops</p></div>
+        <div class="industry-card fade-in"><div class="industry-index">01</div><h3>Manufacturing</h3><p>ERP execution, quoting &amp; catalog search, inventory intelligence, back-office automation</p></div>
+        <div class="industry-card fade-in"><div class="industry-index">02</div><h3>Direct-to-Consumer</h3><p>E-commerce &amp; Shopify ops, ad creative at scale, product content, customer service</p></div>
+        <div class="industry-card fade-in"><div class="industry-index">03</div><h3>Marketing</h3><p>Agentic SEO &amp; AEO, content operations, campaign and ad-creative automation</p></div>
+        <div class="industry-card fade-in"><div class="industry-index">04</div><h3>Home Services</h3><p>Lead response, scheduling &amp; dispatch, review generation, back-office ops</p></div>
       </div>
     </div>
   </section>
@@ -398,11 +400,10 @@ const jsonLd = [
           <label for="industry">Industry</label>
           <select id="industry" name="Industry" required>
             <option value="" disabled selected>Select your industry</option>
-            <option>Entertainment &amp; Content</option>
-            <option>Marketing &amp; Advertising</option>
-            <option>Private Equity</option>
-            <option>Small / Medium Business</option>
-            <option>Product Business</option>
+            <option>Manufacturing</option>
+            <option>Direct-to-Consumer / E-commerce</option>
+            <option>Marketing / Advertising</option>
+            <option>Home Services</option>
             <option>Other</option>
           </select>
         </div>
